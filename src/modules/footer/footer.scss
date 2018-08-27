@@ -1,0 +1,6 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+#{$namespace}mFooter {
+  background-color: red;
+}

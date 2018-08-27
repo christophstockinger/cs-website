@@ -1,0 +1,9 @@
+$-fontsPath : './fonts/';
+
+@font-face {
+	font-family: 'OpenSans';
+	font-style: normal;
+	font-weight: 700;
+	src: url("#{$-fontsPath}OpenSans-Regular.eot");
+	src: url("#{$-fontsPath}OpenSans-Regular.eot?#iefix") format('embedded-opentype'), url("#{$-fontsPath}OpenSans-Regular.woff2") format('woff2'), url("#{$-fontsPath}OpenSans-Regular.woff") format('woff'), url('#{$-fontsPath}OpenSans-Regular.ttf') format('truetype');
+}

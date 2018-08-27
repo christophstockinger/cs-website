@@ -1,0 +1,15 @@
+{% extends './layout/document/document.html.twig' %}
+
+{% block body %}
+  {% embed './layout/page/page.html.twig' %}
+  {% block page %}
+    {% include './modules/header/header.html.twig' %}
+
+    {% embed './layout/main/main.html.twig' %}
+    {% block main %}
+      {% include './modules/grid-example/grid-example.html.twig' %}
+    {% endblock main %}
+    {% endembed %}
+  {% endblock page %}
+  {% endembed %}
+{% endblock body %}

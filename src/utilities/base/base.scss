@@ -1,0 +1,16 @@
+@import '~@util/base/reset';
+@import '~@util/base/fonts';
+@import '~@util/theme/theme';
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $c77-fontSize;
+  font-family: #{$c77-fontFamily}, sans-serif;
+}
+
+body {
+  font-family: #{$c77-fontFamily}, sans-serif;
+}

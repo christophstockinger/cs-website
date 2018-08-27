@@ -1,0 +1,28 @@
+/*
+ * Theme SCSS File
+ * this file is for global scss variables
+ */
+
+$namespace: '.c77-';
+
+$breakpoints: (
+	s: 768px,
+	m: 1024px,
+	l: 1280px
+) !default;
+
+$content-maxWidth: 1280px;
+$header-height: 70px;
+
+// Grid - also grid overlay
+$gridColumns: 12;
+$gridWrapper-padding: (20px / 320px) / 2 * 100%;
+$gridWrapper-padding--smallDevices: 30px;
+$gridGutters: 20px;
+
+
+// $namespace-color-colorname: #000000;
+
+$c77-color-black: #000000;
+$c77-fontSize: 16px;
+$c77-fontFamily: 'Open Sans';

@@ -1,0 +1,21 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+#{$namespace}mHeader {
+  &__wrapper {
+    @include respond-to(l) {
+      @include gridWrapper;
+    }
+  }
+
+
+  &__container {
+    @include gridContainer;
+  }
+
+  &__column {
+    @include gridCell(6);
+    @include gridPost(3);
+    @include gridPre(3);
+  }
+}

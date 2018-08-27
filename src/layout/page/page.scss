@@ -1,0 +1,7 @@
+@import '~@util/theme/theme';
+
+#{$namespace}lPage {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column;
+}
