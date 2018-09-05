@@ -1,16 +1,16 @@
 import './header'
 
-import BaseComponent, { namespace } from '@util/base/component.js'
+import BaseComponent from '@util/base/component.js'
 
 export const NAME = 'Header'
-const CLASS = `${namespace}-mHeader`
+const CLASS = `cs-mHeader`
 
 export const ClassName = {
   ROOT: CLASS
 }
 
 export const Selector = {
-  ROOT: `${ClassName.ROOT}`
+  ROOT: `.${ClassName.ROOT}`
 }
 
 export default class Header extends BaseComponent {
