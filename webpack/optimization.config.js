@@ -6,21 +6,21 @@ const optimization = (env = {}) => {
     minimizer: minimizer
   }
 
-  if (env.production) {
-    optimization = Object.assign({}, optimization, {
-      splitChunks: {
-        chunks: 'all',
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.css$/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
-    })
-  }
+  // if (env.production) {
+  //   optimization = Object.assign({}, optimization, {
+  //     splitChunks: {
+  //       chunks: 'all',
+  //       cacheGroups: {
+  //         styles: {
+  //           name: 'styles',
+  //           test: /\.css$/,
+  //           chunks: 'all',
+  //           enforce: true
+  //         }
+  //       }
+  //     }
+  //   })
+  // }
 
   return optimization
 }

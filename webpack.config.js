@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = (env = {}) => {
   // Aliase
   const aliase = require('./webpack/aliase.config')(env)

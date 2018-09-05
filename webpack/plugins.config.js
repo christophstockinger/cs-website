@@ -1,7 +1,8 @@
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+
 
 const plugins = (env = {}) => {
   const plugins = []
@@ -43,9 +44,9 @@ const plugins = (env = {}) => {
         canPrint: true
       })
     )
-
-    plugins.push(new SpriteLoaderPlugin())
   }
+
+  plugins.push(new SpriteLoaderPlugin())
 
   return plugins
 }
