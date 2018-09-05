@@ -18,9 +18,9 @@ const browsersyncConfig = (env = {}) => {
   const compiler = webpack(webpackConfigs)
 
   const browsersyncConfig = {
-    port: 8080,
+    port: 4000,
     ui: {
-      port: 8081
+      port: 4001
     },
     open: false,
     // tunnel: true,

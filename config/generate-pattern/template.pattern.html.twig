@@ -1,3 +1,3 @@
-<div class="{{namespace}}<%= classname %>{% for modifier in modifiers %}{{modifier}}{% endfor %}{% for xclass in xclasses %}{{xclass}}{% endfor %}">
-  <div class="{{namespace}}<%= classname %>__descendent"><%= name %></div>
+<div class="<%= classname %>{% for modifier in modifiers %} <%= classname %>--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  <div class="<%= classname %>__descendent"><%= name %></div>
 </div>

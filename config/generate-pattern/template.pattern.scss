@@ -1,4 +1,8 @@
 @import '~@util/theme/theme';
 @import '~@util/theme/mixins';
 
-#{$namespace}<%= classname %> {}
+.<%= classname %> {
+  // &__descendent {
+  //   &--modifier {}
+  // }
+}

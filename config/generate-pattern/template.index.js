@@ -3,10 +3,10 @@
 
 import './<%= filename %>'
 
-import BaseComponent, { namespace }  from '@util/base/component.js'
+import BaseComponent from '@util/base/component.js'
 
 export const NAME = '<%= name%>'
-const CLASS = `${namespace}-<%= classname %>`
+const CLASS = `.<%= classname %>`
 
 export const ClassName = {
   ROOT: CLASS
