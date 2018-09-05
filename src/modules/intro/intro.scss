@@ -1,0 +1,33 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+.cs-mIntro {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 6.25rem;
+  background-color: $cs-color-white;
+
+  @include respond-to(l) {
+    padding-top: 9.375rem;
+    padding-bottom: 9.375rem;
+  }
+
+  &__wrapper {
+    @include gridWrapper;
+  }
+
+  &__container {
+    @include gridContainer;
+  }
+
+  &__richtext {
+    @include gridCell(10);
+    @include gridPost(2);
+
+    @include respond-to(m) {
+      @include gridCell(6);
+      @include gridPre(2);
+      @include gridPost(4);
+    }
+  }
+}

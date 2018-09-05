@@ -1,0 +1,13 @@
+<div class="cs-mIntro{% for modifier in modifiers %} cs-mIntro--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  <div class="cs-mIntro__wrapper">
+    <div class="cs-mIntro__container">
+      <div class="cs-mIntro__richtext">
+        {% include './../../components/headline/headline.html.twig' with headline %}
+        {% include './../../components/headline/headline.html.twig' with subline %}
+        {% for paragraph in paragraphs %}
+        {% include './../../components/paragraph/paragraph.html.twig' with paragraph %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
