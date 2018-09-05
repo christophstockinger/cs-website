@@ -9,11 +9,15 @@ import '@src/layout/main'
 import SVGSprite, { Selector as uSVGSpriteSelector } from '@util/sprite'
 
 // COMPONENTS - Import
+import '@com/logo'
+import '@com/headline'
+import '@com/paragraph'
+import '@com/symbol'
 // import Component, { Selector as cComponentSelector } from '@com/component'
 
 // MODULES - Import
 // import Module, { Selector as mModuleSelector } from '@mod/module'
-import '@mod/grid-example'
+import '@mod/intro'
 import Header, { Selector as mHeaderSelector } from '@mod/header'
 import Footer, { Selector as mFooterSelector } from '@mod/footer'
 
