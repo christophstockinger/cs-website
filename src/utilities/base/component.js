@@ -1,7 +1,5 @@
 import Events from 'minivents'
 
-export const namespace = `.c77`
-
 export default class BaseComponent extends Events {
   static upgradeAll(selector) {
     if (typeof selector !== 'object') {
