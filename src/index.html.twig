@@ -7,7 +7,28 @@
 
     {% embed './layout/main/main.html.twig' %}
     {% block main %}
-      {% include './modules/grid-example/grid-example.html.twig' %}
+      {% include './modules/intro/intro.html.twig' with {
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          content: 'Hi, I am Christoph'
+        },
+        subline: {
+          tag: 'h2',
+          modifiers: ['h2'],
+          content: 'Web Developer and Digital Designer'
+        },
+        paragraphs: [
+          {
+            modifiers: [],
+            content: 'At the beginning of 2018 I successfully completed my studies at the <a class="cs-cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. Meanwhile, I did my internship and my bachelor thesis at <a class="cs-cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart. Currently I work at <a class="cs-cAnker" href="http://www.abc.xyz">xyz</a> and I\'m the way self-employed as a Web Developer for my label <a class="cs-cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
+          },
+          {
+            modifiers: [],
+            content: 'In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.'
+          }
+        ] 
+      } %}
     {% endblock main %}
     {% endembed %}
   {% endblock page %}
