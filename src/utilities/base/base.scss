@@ -2,15 +2,15 @@
 @import '~@util/base/fonts';
 @import '~@util/theme/theme';
 
-*{
+* {
   box-sizing: border-box;
 }
 
 html {
-  font-size: $c77-fontSize;
-  font-family: #{$c77-fontFamily}, sans-serif;
+  font-family: #{$cs-fontFamily}, sans-serif;
+  font-size: $cs-fontSize;
 }
 
 body {
-  font-family: #{$c77-fontFamily}, sans-serif;
+  font-family: #{$cs-fontFamily}, sans-serif;
 }
