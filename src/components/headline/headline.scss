@@ -1,0 +1,28 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+.cs-cHeadline {
+  font-family: $cs-fontFamily;
+  font-weight: $cs-fontWeight--bold;
+
+  &--h1 {
+    // margin-bottom: 0.625rem;
+    font-size: 1.375rem;
+    color: $cs-color-black;
+
+    @include respond-to(l) {
+      // margin-bottom: 1.5625rem;
+      font-size: 2rem;
+    }
+  }
+
+  &--h2 {
+    // margin-bottom: 3.25rem;
+    font-size: 1.125rem;
+    color: $cs-color-green;
+
+    @include respond-to(l) {
+      font-size: 1.5rem;
+    }
+  }
+}
