@@ -2,17 +2,15 @@
  * Theme SCSS File
  * this file is for global scss variables
  */
+@import '@util/theme/mixins';
 
-$namespace: '.c77-';
-
-$breakpoints: (
-	s: 768px,
-	m: 1024px,
-	l: 1280px
-) !default;
+$breakpoints: (s: 768px,
+m: 1024px,
+l: 1280px) !default;
 
 $content-maxWidth: 1280px;
-$header-height: 70px;
+$header-height--xs: 60px;
+$header-height--l: 70px;
 
 // Grid - also grid overlay
 $gridColumns: 12;
@@ -20,9 +18,15 @@ $gridWrapper-padding: (20px / 320px) / 2 * 100%;
 $gridWrapper-padding--smallDevices: 30px;
 $gridGutters: 20px;
 
+// Font
+$cs-fontSize: 16px;
+$cs-fontFamily: 'Rajdhani';
+$cs-fontWeight: 400;
+$cs-fontWeight--bold: 700;
 
-// $namespace-color-colorname: #000000;
-
-$c77-color-black: #000000;
-$c77-fontSize: 16px;
-$c77-fontFamily: 'Open Sans';
+// Colors
+$cs-color-green: #00ae2f;
+$cs-color-darkGreen: #005000;
+$cs-color-black: #0a0a0a;
+$cs-color-grey: #d8d8d8;
+$cs-color-white: #fff;
