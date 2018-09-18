@@ -2,10 +2,10 @@
   position: relative;
   padding-top: 2.5rem;
   padding-bottom: 6.25rem;
-  background-color: $color-white;
+  background-color: $cs-color-white;
 
   &--grey {
-    background-color: $color-grey;
+    background-color: $cs-color-grey;
   }
 
   @include respond-to(m) {

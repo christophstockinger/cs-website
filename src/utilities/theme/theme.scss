@@ -4,9 +4,12 @@
  */
 @import '@util/theme/mixins';
 
-$breakpoints: (s: 768px,
-m: 1024px,
-l: 1280px) !default;
+$breakpoints: (
+  xs: 480px,
+  s: 768px,
+  m: 1024px,
+  l: 1280px
+) !default;
 
 $content-maxWidth: 1280px;
 $header-height--xs: 60px;

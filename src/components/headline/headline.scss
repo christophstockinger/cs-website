@@ -3,11 +3,11 @@
 
 .cHeadline {
   font-family: $cs-fontFamily;
-  font-weight: $fontWeight--bold;
+  font-weight: $cs-fontWeight--bold;
 
   &--h1 {
     font-size: 1.375rem;
-    color: $color-black;
+    color: $cs-color-black;
 
     @include respond-to(l) {
       font-size: 2rem;
@@ -16,7 +16,7 @@
 
   &--h2 {
     font-size: 1.125rem;
-    color: $color-green;
+    color: $cs-color-green;
 
     @include respond-to(l) {
       font-size: 1.5rem;

@@ -5,8 +5,8 @@
   position: relative;
   font-family: $cs-fontFamily;
   font-size: inherit;
-  font-weight: $fontWeight;
-  color: $color-darkGreen;
+  font-weight: $cs-fontWeight;
+  color: $cs-color-darkGreen;
   text-decoration: none;
   cursor: pointer;
 
@@ -18,17 +18,17 @@
     height: 1px;
     visibility: visible;
     content: "";
-    background-color: $color-darkGreen;
+    background-color: $cs-color-darkGreen;
     transition: all 300ms ease-in-out;
     transform: scaleX(1);
   }
 
   &:hover {
-    color: $color-green;
+    color: $cs-color-green;
 
     &::before {
       visibility: visible;
-      background-color: $color-green;
+      background-color: $cs-color-green;
       animation: underline;
       animation-duration: 300ms;
       animation-timing-function: ease-in-out;

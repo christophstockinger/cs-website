@@ -11,9 +11,9 @@
   &__content {
     font-family: $cs-fontFamily;
     font-size: 1rem;
-    font-weight: $fontWeight;
+    font-weight: $cs-fontWeight;
     line-height: 1.5;
-    color: $color-black;
+    color: $cs-color-black;
 
     @include respond-to(m) {
       font-size: 1.125rem;
