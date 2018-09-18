@@ -11,23 +11,70 @@
         headline: {
           tag: 'h1',
           modifiers: ['h1'],
+          xclasses: ['mIntro__headline'],
           content: 'Hi, I am Christoph'
         },
         subline: {
           tag: 'h2',
           modifiers: ['h2'],
+          xclasses: ['mIntro__subline'],
           content: 'Web Developer and Digital Designer'
         },
         paragraphs: [
           {
             modifiers: [],
-            content: 'At the beginning of 2018 I successfully completed my studies at the <a class="cs-cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. Meanwhile, I did my internship and my bachelor thesis at <a class="cs-cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart. Currently I work at <a class="cs-cAnker" href="http://www.abc.xyz">xyz</a> and I\'m the way self-employed as a Web Developer for my label <a class="cs-cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
+            xclasses: ['mIntro__paragraph'],
+            content: 'At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.<br>I am currently writing my bachelor thesis at Strichpunkt Design on a technical solution approach for a UI kit.<br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
           },
           {
             modifiers: [],
+            xclasses: ['mIntro__paragraph'],
             content: 'In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.'
           }
-        ] 
+        ]
+      } %}
+      {% include './modules/knowledge/knowledge.html.twig' with {
+        modifiers: ['grey'],
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mKnowledge__paragraph'],
+            content: 'At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.<br>I am currently writing my bachelor thesis at Strichpunkt Design on a technical solution approach for a UI kit.<br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
+          },
+          {
+            modifiers: [],
+            xclasses: ['mKnowledge__paragraph'],
+            content: 'In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.'
+          }
+        ]
+      } %}
+      {% include './modules/image/image.html.twig' with {
+        image: {
+          src: '',
+          alt: ''
+        }
+      } %}
+      {% include './modules/contact/contact.html.twig' with {
+        modifiers: ['grey'],
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mContact__paragraph'],
+            content: 'You want to work with me or a website of mine, then get in touch with me'
+          }
+        ],
+        contactdata: [
+          {
+            type: 'email',
+            content: 'hello@christophstockinger.de',
+            xclasses: ['mContact__email'],
+          },
+          {
+            type: 'number',
+            content: '+49 (0) 160 1899824',
+            xclasses: ['mContact__mobil'],
+          }
+        ]
       } %}
     {% endblock main %}
     {% endembed %}
