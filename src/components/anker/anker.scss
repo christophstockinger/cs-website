@@ -1,31 +1,42 @@
 @import '~@util/theme/theme';
 @import '~@util/theme/mixins';
 
-.cs-cAnker {
+.cAnker {
   position: relative;
-  font-family: $cs-fontFamily;
+  font-family: $fontFamily;
   font-size: inherit;
-  font-weight: $cs-fontWeight;
-  color: $cs-color-darkGreen;
+  font-weight: $fontWeight;
+  color: $color-darkGreen;
   text-decoration: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
-    bottom: 5px;
+    bottom: 1px;
     left: 0;
     width: 100%;
     height: 1px;
-    visibility: hidden;
+    visibility: visible;
     content: "";
-    background-color: $cs-color-green;
-    transition: all 0.3s ease-in-out 0s;
-    transform: scaleX(0);
+    background-color: $color-darkGreen;
+    transition: all 300ms ease-in-out;
+    transform: scaleX(1);
   }
 
   &:hover {
+    color: $color-green;
+
     &::before {
       visibility: visible;
-      transform: scaleX(1);
+      background-color: $color-green;
+      animation: underline;
+      animation-duration: 300ms;
+      animation-timing-function: ease-in-out;
     }
   }
+}
+
+@keyframes underline {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
 }
