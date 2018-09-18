@@ -1,14 +1,14 @@
 @import '~@util/theme/theme';
 @import '~@util/theme/mixins';
 
-.cs-mHeader {
+.mHeader {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 4000;
   height: $header-height--xs;
-  background-color: $cs-color-white;
+  background-color: $color-white;
 
   @include respond-to(l) {
     height: $header-height--l;
@@ -23,7 +23,7 @@
     width: 100%;
     height: 1px;
     content: "";
-    background-color: $cs-color-grey;
+    background-color: $color-grey;
   }
 
   &__wrapper {

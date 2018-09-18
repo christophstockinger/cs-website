@@ -1,7 +1,7 @@
-<div class="cs-mHeader{% for modifier in modifiers %} cs-mHeader--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
-  <div class="cs-mHeader__wrapper">
-    <div class="cs-mHeader__container">
-      <div class="cs-mHeader__logo">
+<header class="mHeader{% for modifier in modifiers %} mHeader--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  <div class="mHeader__wrapper">
+    <div class="mHeader__container">
+      <div class="mHeader__logo">
         {% include './../../components/logo/logo.html.twig' with {
           url: '#top',
           image: {
@@ -12,4 +12,4 @@
       </div>
     </div>
   </div>
-</div>
+</header>

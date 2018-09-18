@@ -1,7 +1,7 @@
 @import '~@util/theme/theme';
 @import '~@util/theme/mixins';
 
-.cs-mGridExample {
+.mGridExample {
   &__wrapper {
     @include respond-to(l) {
       @include gridWrapper;
