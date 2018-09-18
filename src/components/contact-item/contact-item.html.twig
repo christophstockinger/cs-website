@@ -1,0 +1,11 @@
+<div class="cContactItem cContactItem__content--{{type}}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  {% if type == 'email' %}
+  {% include './../anker/anker.html.twig' with {
+    url: 'mailto:' ~ content,
+    content: content,
+    xclasses: ['cContactItem__content']
+  } only %}
+  {% elseif type == 'number' %}
+  <span class="cContactItem__content cAnker">{{content}}</span>
+  {% endif %}
+</div>
