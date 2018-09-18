@@ -1,0 +1,23 @@
+@mixin section {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 6.25rem;
+  background-color: $color-white;
+
+  &--grey {
+    background-color: $color-grey;
+  }
+
+  @include respond-to(m) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__wrapper {
+    @include gridWrapper;
+  }
+
+  &__container {
+    @include gridContainer;
+  }
+}
