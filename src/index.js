@@ -13,13 +13,18 @@ import '@com/logo'
 import '@com/headline'
 import '@com/paragraph'
 import '@com/symbol'
+import '@com/anker'
+import '@com/contact-item'
 // import Component, { Selector as cComponentSelector } from '@com/component'
 
 // MODULES - Import
 // import Module, { Selector as mModuleSelector } from '@mod/module'
+import '@mod/header'
 import '@mod/intro'
-import Header, { Selector as mHeaderSelector } from '@mod/header'
-import Footer, { Selector as mFooterSelector } from '@mod/footer'
+import '@mod/knowledge'
+import '@mod/image'
+import '@mod/contact'
+import '@mod/footer'
 
 // UTILS - Init
 const sprite = document.querySelector(uSVGSpriteSelector.ROOT)
@@ -30,5 +35,3 @@ if (sprite) SVGSprite.attachTo(sprite)
 
 // MODULE - Init
 // Module.upgradeAll(mModuleSelector.ROOT)
-Header.upgradeAll(mHeaderSelector.ROOT)
-Footer.upgradeAll(mFooterSelector.ROOT)
