@@ -12,7 +12,7 @@ const fileLoader = (env = {}) => {
       options: {
         name: '[name].[ext]',
         outputPath: 'images/',
-        publicPath: 'assets/images/'
+        publicPath: '/assets/images/'
       }
     }
   })
@@ -26,7 +26,7 @@ const fileLoader = (env = {}) => {
       options: {
         name: '[name].[ext]',
         outputPath: 'images/',
-        publicPath: 'assets/images/'
+        publicPath: '/assets/images/'
       }
     }
   })
@@ -38,7 +38,7 @@ const fileLoader = (env = {}) => {
       options: {
         name: '[name].[ext]',
         outputPath: 'fonts/',
-        publicPath: 'assets/fonts/'
+        publicPath: '/assets/fonts/'
       }
     }
   })
