@@ -41,8 +41,8 @@
 
     @include respond-to(s) {
       @include gridCell(6);
-      @include gridPre(2);
-      @include gridPost(4);
+      @include gridPre(4);
+      @include gridPost(2);
     }
   }
 }
