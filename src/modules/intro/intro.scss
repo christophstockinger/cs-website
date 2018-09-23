@@ -40,4 +40,8 @@
       margin-bottom: 0;
     }
   }
+
+  &::before {
+    display: none;
+  }
 }
