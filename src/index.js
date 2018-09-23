@@ -9,29 +9,30 @@ import '@src/layout/main'
 import SVGSprite, { Selector as uSVGSpriteSelector } from '@util/sprite'
 
 // COMPONENTS - Import
-import '@com/logo'
+import '@com/anker'
+import '@com/button-group'
+import '@com/contact-item'
 import '@com/headline'
+import Image, { Selector as cImageSelector } from '@com/image'
+import '@com/logo'
+import '@com/navigation'
 import '@com/paragraph'
 import '@com/symbol'
-import '@com/anker'
-import '@com/contact-item'
-// import Component, { Selector as cComponentSelector } from '@com/component'
 
 // MODULES - Import
-// import Module, { Selector as mModuleSelector } from '@mod/module'
-import '@mod/header'
-import '@mod/intro'
-import '@mod/knowledge'
-import '@mod/image'
 import '@mod/contact'
 import '@mod/footer'
+import '@mod/header'
+import '@mod/image'
+import '@mod/intro'
+import '@mod/knowledge'
 
 // UTILS - Init
 const sprite = document.querySelector(uSVGSpriteSelector.ROOT)
 if (sprite) SVGSprite.attachTo(sprite)
 
 // COMPONENTS- Init
-// Component.upgradeAll(cComponentSelector.ROOT)
+Image.upgradeAll(cImageSelector.ROOT)
 
 // MODULE - Init
 // Module.upgradeAll(mModuleSelector.ROOT)
