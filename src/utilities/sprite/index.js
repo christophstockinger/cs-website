@@ -1,7 +1,7 @@
 import './sprite.scss'
 
 export const NAME = 'uSprite'
-const CLASS = 'u-Sprite'
+const CLASS = 'uSprite'
 
 export const ClassName = {
   ROOT: CLASS
