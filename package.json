@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
-  "version": "2.0.0-beta",
-  "description": "",
+  "name": "cs-website",
+  "version": "6.0.0",
+  "description": "Webseite von Christoph Stockinger <http://www.christophstockinger.de>",
   "main": "index.js",
   "scripts": {
     "start": "concurrently 'npm run serve' 'npm run watch' 'npm run twig:watch' ",
