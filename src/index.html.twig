@@ -24,12 +24,18 @@
           {
             modifiers: [],
             xclasses: ['mIntro__paragraph'],
-            content: 'At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.<br>I am currently writing my bachelor thesis at Strichpunkt Design on a technical solution approach for a UI kit.<br>I also work as a freelance web developer with my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
+            content: '
+              At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.
+              <br>I am currently writing my bachelor thesis at Strichpunkt Design on the translation of a brand architecture into a digital UI kit.
+              <br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.
+            '
           },
           {
             modifiers: [],
             xclasses: ['mIntro__paragraph'],
-            content: 'In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.'
+            content: '
+              In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.
+            '
           }
         ]
       } %}
@@ -39,19 +45,25 @@
           {
             modifiers: [],
             xclasses: ['mKnowledge__paragraph'],
-            content: 'At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.<br>I am currently writing my bachelor thesis at Strichpunkt Design on a technical solution approach for a UI kit.<br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.' 
+            content: '
+              At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.
+              <br>I am currently writing my bachelor thesis at Strichpunkt Design on the translation of a brand architecture into a digital UI kit.
+              <br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.
+            '
           },
           {
             modifiers: [],
             xclasses: ['mKnowledge__paragraph'],
-            content: 'In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.'
+            content: '
+              In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.
+            '
           }
         ]
       } %}
       {% include './modules/image/image.html.twig' with {
         image: {
-          src: '',
-          alt: ''
+          src: '/assets/images/christoph-stockinger.jpg',
+          alt: 'Christoph Stockinger Portrait'
         }
       } %}
       {% include './modules/contact/contact.html.twig' with {
@@ -60,7 +72,7 @@
           {
             modifiers: [],
             xclasses: ['mContact__paragraph'],
-            content: 'You want to work with me or a website of mine, then get in touch with me'
+            content: 'You want to work with me or a website of mine, then get in touch with me:'
           }
         ],
         contactdata: [
@@ -78,6 +90,23 @@
       } %}
     {% endblock main %}
     {% endembed %}
+
+    {% include './modules/footer/footer.html.twig' with {
+      navigation: {
+        items: [
+          {
+            url: 'impressum.html',
+            content: 'Impressum'
+          }
+        ],
+        xclasses:['mFooter__navigation']
+      },
+      copyright: {
+        content: '&copy; 2018 Christoph Stockinger',
+        modifiers: ['small'],
+        xclasses: ['mFooter__copyright']
+      }
+    } %}
   {% endblock page %}
   {% endembed %}
 {% endblock body %}
