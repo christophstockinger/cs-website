@@ -26,7 +26,7 @@
   {% endblock body %}
 
   {% if (environment == 'production') %}
-  <div class="uSprite" data-href="/assets/sprite.svg" data-revision="-1"></div>
+  <div class="uSprite" data-href="/assets/sprite.svg" data-revision="{{dataRevision}}"></div>
   {% endif %}
 
   <script src="/assets/main.bundle.js" type="text/javascript"></script>
