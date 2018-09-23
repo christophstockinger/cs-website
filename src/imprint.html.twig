@@ -1,0 +1,46 @@
+{% extends './layout/document/document.html.twig' %}
+
+{% block body %}
+  {% embed './layout/page/page.html.twig' %}
+  {% block page %}
+    {% include './modules/header/header.html.twig' %}
+
+    {% embed './layout/main/main.html.twig' %}
+    {% block main %}
+      {% include './modules/intro/intro.html.twig' with {
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          xclasses: ['mIntro__headline'],
+          content: 'Imprint'
+        },
+        subline: {
+          tag: 'h2',
+          modifiers: ['h2'],
+          xclasses: ['mIntro__subline'],
+          content: ''
+        },
+        paragraphs: []
+      } %}
+    {% endblock main %}
+    {% endembed %}
+
+    {% include './modules/footer/footer.html.twig' with {
+      navigation: {
+        items: [
+          {
+            url: 'impressum.html',
+            content: 'Impressum'
+          }
+        ],
+        xclasses:['mFooter__navigation']
+      },
+      copyright: {
+        content: '&copy; 2018 Christoph Stockinger',
+        modifiers: ['small'],
+        xclasses: ['mFooter__copyright']
+      }
+    } %}
+  {% endblock page %}
+  {% endembed %}
+{% endblock body %}
