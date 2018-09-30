@@ -3,7 +3,16 @@
 {% block body %}
   {% embed './layout/page/page.html.twig' %}
   {% block page %}
-    {% include './modules/header/header.html.twig' %}
+    {% include './modules/header/header.html.twig' with {
+      logo: {
+        modifiers: ['scroller'],
+        url: '#top',
+        image: {
+          src: 'assets/images/cs-wortmarke.svg',
+          alt: 'CHRISTOPH STOCKINGER'
+        }
+      }
+    } %}
 
     {% embed './layout/main/main.html.twig' %}
     {% block main %}
@@ -46,17 +55,8 @@
             modifiers: [],
             xclasses: ['mKnowledge__paragraph'],
             content: '
-              At the beginning of 2018, I will graduate my media technology studies at the <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a>. During my studies I completed my practical semester at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart.
-              <br>I am currently writing my bachelor thesis at Strichpunkt Design on the translation of a brand architecture into a digital UI kit.
-              <br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.
-            '
-          },
-          {
-            modifiers: [],
-            xclasses: ['mKnowledge__paragraph'],
-            content: '
-              In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.
-            '
+              My self-learned knowledge in HTML, (S)CSS, ES6 (Javascript) and PHP (Laravel-Framework) I was able to expand steadily during my studies. During my internship and on the basis of my own projects I learned how to use Webpack, NodeJS and Twig. Furthermore I could extend my knowledge in different CMS systems like Wordpress, October CMS, CraftCMS.
+              <br>In addition, I have acquired sound knowledge for the creation of a UI-Kit (using the Fractal Framework) according to the Atomic design principle of Brad Frost.'
           }
         ]
       } %}
