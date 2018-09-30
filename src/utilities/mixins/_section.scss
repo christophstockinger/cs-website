@@ -21,33 +21,5 @@
     background-color: $cs-color-grey;
   }
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 1.5rem;
-    content: '';
-    background-color: $cs-color-green;
-    transform: translateX(-50%);
-
-    @include respond-to(m) {
-      height: 4rem;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    height: 4rem;
-    content: '';
-    background-color: $cs-color-green;
-    transform: translateX(-50%);
-
-    @include respond-to(m) {
-      height: 4rem;
-    }
-  }
+  @include deco;
 }
