@@ -32,9 +32,10 @@
   },
   "homepage": "https://github.com/christophstockinger/cs-website#readme",
   "dependencies": {
-    "minivents": "^2.2.0",
     "mdn-polyfills": "^5.10.1",
-    "objectFitPolyfill": "^2.1.1"
+    "minivents": "^2.2.0",
+    "objectFitPolyfill": "^2.1.1",
+    "smoothscroll": "^0.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.1",
