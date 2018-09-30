@@ -9,6 +9,18 @@
 html {
   font-family: #{$cs-fontFamily}, sans-serif;
   font-size: $cs-fontSize;
+
+  &::after {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 2000;
+    width: 2px;
+    height: 5rem;
+    content: '';
+    background-color: $cs-color-green;
+    transform: translateX(-50%);
+  }
 }
 
 body {
