@@ -3,10 +3,11 @@
 
 .cAnker {
   position: relative;
+  display: inline-block;
   font-family: $cs-fontFamily;
   font-size: inherit;
   font-weight: $cs-fontWeight;
-  color: $cs-color-darkGreen;
+  color: $cs-color-green;
   text-decoration: none;
   cursor: pointer;
 
@@ -18,7 +19,7 @@
     height: 1px;
     visibility: visible;
     content: "";
-    background-color: $cs-color-darkGreen;
+    background-color: $cs-color-green;
     transition-timing-function: ease-out;
     transition-duration: 300ms;
     transition-property: background-color, transform;
