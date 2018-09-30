@@ -15,4 +15,12 @@
   &--small {
     font-size: 0.75rem;
   }
+
+  &--bold {
+    font-weight: $cs-fontWeight--bold;
+  }
+
+  &--topSpacing {
+    margin-top: 1.5625rem;
+  }
 }
