@@ -8,17 +8,12 @@
         {% endfor %}
       {% endif %}
       </div>
-
       <div class="mContact__contactItems">
       {% if contactdata.length > 0 %}
         {% for contactitem in contactdata %}
           {% include './../../components/contact-item/contact-item.html.twig' with contactitem %}
         {% endfor %}
       {% endif %}
-      </div>
-
-
-
       </div>
     </div>
   </div>
