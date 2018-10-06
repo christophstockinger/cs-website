@@ -1,4 +1,5 @@
 import '@util/base'
+import '@util/theme'
 import '@util/polyfill'
 
 // LAYOUTS- Import
