@@ -33,13 +33,10 @@
   }
 
   &__container {
-    display: flex;
+    @include gridContainer;
+
     align-items: center;
     height: 100%;
-
-    @include respond-to(l) {
-      @include gridContainer;
-    }
   }
 
   &__logo {
@@ -47,7 +44,7 @@
     @include gridPost(1);
     @include gridPre(1);
 
-    @include respond-to(l) {
+    @include respond-to(s) {
       @include gridCell(4);
       @include gridPost(4);
       @include gridPre(4);
