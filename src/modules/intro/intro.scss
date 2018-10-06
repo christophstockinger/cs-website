@@ -44,4 +44,11 @@
   &::before {
     display: none;
   }
+
+  &--noDeco {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }

@@ -96,4 +96,11 @@
     background-color: $cs-color-green;
     transform: translateX(-50%);
   }
+
+  &--noDeco {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
