@@ -1,5 +1,6 @@
 import './image'
 import '@src/assets/images/christoph-stockinger.jpg'
+import '@src/assets/images/christoph-stockinger-1.jpg'
 
 import BaseComponent from '@util/base/component.js'
 
