@@ -30,11 +30,19 @@
     color: $cs-color-green;
 
     &::before {
-      visibility: visible;
-      background-color: $cs-color-green;
-      animation: underline;
-      animation-duration: 300ms;
-      animation-timing-function: ease-out;
+      display: none;
+      animation-name: none;
+      animation-duration: 0s;
+      animation-timing-function: ease;
+
+      @include respond-to(s) {
+        display: block;
+        visibility: visible;
+        background-color: $cs-color-green;
+        animation: underline;
+        animation-duration: 300ms;
+        animation-timing-function: ease-out;
+      }
     }
   }
 
