@@ -13,7 +13,7 @@
     "serve": "browser-sync start --config './config/browser-sync.js'",
     "twig": "twig-cli './src/*-pre.html.twig' --base ./src/ --output ./dist/ && npm run min",
     "twig:watch": "watch -p './src/**/*-pre.html.twig' -c 'npm run twig'",
-    "min": "htmlmin -o ./dist/index.html ./dist/index-pre.html && htmlmin -o ./dist/imprint.html ./dist/imprint-pre.html && htmlmin -o ./dist/400.html ./dist/400-pre.html && htmlmin -o ./dist/401.html ./dist/401-pre.html && htmlmin -o ./dist/403.html ./dist/403-pre.html && htmlmin -o ./dist/404.html ./dist/404-pre.html && htmlmin -o ./dist/500.html ./dist/500-pre.html && npm run clean-pre",
+    "min": "htmlmin -o ./dist/index.html ./dist/index-pre.html && htmlmin -o ./dist/imprint.html ./dist/imprint-pre.html && htmlmin -o ./dist/400.html ./dist/400-pre.html && htmlmin -o ./dist/401.html ./dist/401-pre.html && htmlmin -o ./dist/403.html ./dist/403-pre.html && htmlmin -o ./dist/404.html ./dist/404-pre.html && htmlmin -o ./dist/500.html ./dist/500-pre.html && htmlmin -o ./dist/noie.html ./dist/noie-pre.html && npm run clean-pre",
     "clean": "rimraf ./dist",
     "clean-pre": "rimraf ./dist/*-pre.html",
     "generate": "node ./config/generate-pattern/generate.js",
