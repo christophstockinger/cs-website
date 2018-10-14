@@ -1,7 +1,7 @@
 <footer class="mFooter{% for modifier in modifiers %} mFooter--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
   <div class="mFooter__wrapper">
     <div class="mFooter__container">
-      {% include './../../components/navigation/navigation.html.twig' with navigation %}
+      {% include './../../components/navigation/navigation.html.twig' with navigation only %}
       {% embed './../../components/button-group/button-group.html.twig' with { xclasses: ['mFooter__socialMedia'] } only %}
         {% block buttons %}
             <a href="https://github.com/christophstockinger" class="cAnker cAnker--noUnderline cAnker--icon">
@@ -19,7 +19,7 @@
         {% endblock buttons %}
       {% endembed %}
       <div class="mFooter__legal">
-        {% include './../../components/paragraph/paragraph.html.twig' with copyright %}
+        {% include './../../components/paragraph/paragraph.html.twig' with copyright only %}
       </div>
     </div>
   </div>

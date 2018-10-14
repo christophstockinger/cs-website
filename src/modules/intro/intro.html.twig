@@ -10,7 +10,7 @@
         {% endif %}
         {% if paragraphs.length > 0 %}
           {% for paragraph in paragraphs %}
-            {% include './../../components/paragraph/paragraph.html.twig' with paragraph %}
+            {% include './../../components/paragraph/paragraph.html.twig' with paragraph only %}
           {% endfor %}
         {% endif %}
       </div>

@@ -3,14 +3,14 @@
     <div class="mDataProtection__container">
       <div class="mDataProtection__richtext">
         {% if headline %}
-          {% include './../../components/headline/headline.html.twig' with headline %}
+          {% include './../../components/headline/headline.html.twig' with headline only %}
         {% endif %}
         {% if subline %}
-          {% include './../../components/headline/headline.html.twig' with subline %}
+          {% include './../../components/headline/headline.html.twig' with subline only %}
         {% endif %}
         {% if paragraphs.length > 0 %}
           {% for paragraph in paragraphs %}
-            {% include './../../components/paragraph/paragraph.html.twig' with paragraph %}
+            {% include './../../components/paragraph/paragraph.html.twig' with paragraph only %}
           {% endfor %}
         {% endif %}
       </div>
