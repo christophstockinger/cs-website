@@ -88,6 +88,9 @@
           }
         ]
       } %}
+      {% include './modules/no-ie/no-ie.html--shadow.twig' with {
+        modifiers: ['shadow']
+      } only %}
     {% endblock main %}
     {% endembed %}
 
@@ -106,7 +109,7 @@
         modifiers: ['small'],
         xclasses: ['mFooter__copyright']
       }
-    } %}
+    } only %}
   {% endblock page %}
   {% endembed %}
 {% endblock body %}
