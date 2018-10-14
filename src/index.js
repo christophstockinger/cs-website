@@ -29,6 +29,7 @@ import '@mod/image'
 import '@mod/imprint'
 import '@mod/intro'
 import '@mod/knowledge'
+import NoIe, { Selector as mNoIeSelector } from '@mod/no-ie'
 
 // UTILS - Init
 const sprite = document.querySelector(uSVGSpriteSelector.ROOT)
@@ -39,4 +40,4 @@ Image.upgradeAll(cImageSelector.ROOT)
 Logo.upgradeAll(cLogoSelector.ROOT)
 
 // MODULE - Init
-// Module.upgradeAll(mModuleSelector.ROOT)
+NoIe.upgradeAll(mNoIeSelector.ROOT)
