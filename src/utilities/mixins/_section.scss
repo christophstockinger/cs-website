@@ -21,5 +21,10 @@
     background-color: $cs-color-grey;
   }
 
+  &--padding2Rem {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   @include deco;
 }
