@@ -21,7 +21,7 @@
     "stylelint": "stylelint **/*.{css,scss}",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . && npm run stylelint",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "lint:commit": "commitlint -e $GIT_PARAMS"
+    "lint:commit": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -58,8 +58,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git-branch-is -r \"^((?!master).)*$\" && lint-staged",
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
