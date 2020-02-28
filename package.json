@@ -59,12 +59,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "echo \"commit-msg hook from Husky\" && commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": "eslint",
-    "src/**/*.{css,scss}": "stylelint"
+    "**/*.{js,jsx}": "eslint",
+    "**/*.{css,scss}": "stylelint"
   },
   "browserslist": [
     "last 2 versions",
