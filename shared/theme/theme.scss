@@ -1,0 +1,67 @@
+// Imports
+@import './typo';
+@import './mixins';
+@import './grid';
+
+// CS Font Settings
+$cs-font: 'Rajdhani', sans-serif;
+$cs-font-weight: 400;
+$cs-font-weight-bold: 700;
+
+// CS Colors
+$cs-color-green: #00ae2f;
+// $cs-color-darkgreen: #005000;
+$cs-color-black: #0a0a0a;
+$cs-color-grey: #d8d8d8;
+$cs-color-white: #fff;
+
+// CS Breakpoints
+$cs-breakpoint-s: 600px; // 600 bis 959
+$cs-breakpoint-m: 960px; // 960 bis 1279
+$cs-breakpoint-l: 1280px; // 1280 bis 1919
+$cs-breakpoint-xl: 1920px; // 1920 bis unendlich
+$cs-breakpoints: (
+  s: $cs-breakpoint-s,
+  m: $cs-breakpoint-m,
+  l: $cs-breakpoint-l,
+  xl: $cs-breakpoint-xl
+) !default;
+
+// CS Grid
+$cs-max-content-width: 1280px !default;
+$cs-grid-columns-default: 12 !default;
+
+$cs-grid-wrapper-padding: (
+  xs: 5%,
+  s: 5%,
+  m: 5%,
+  l: (
+    20px / 320px
+  ) / 2 * 100%,
+  xl: (
+    20px / 320px
+  ) / 2 * 100%
+) !default;
+
+$cs-grid-gutters: (
+  xs: 15px,
+  s: 15px,
+  m: 15px,
+  l: 20px,
+  xl: 20px
+) !default;
+
+$cs-grid-columns: (
+  xs: 12,
+  s: 12,
+  m: 12,
+  l: 12,
+  xl: 12
+) !default;
+
+// CS Breakpoints
+$cs-smallestGridBreakpoint: xs;
+
+// CS Animation & Transition
+$cs-transition-timing-function: ease-in-out;
+$cs-transition-duration: 400ms;

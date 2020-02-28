@@ -1,0 +1,6 @@
+@mixin cs-remove-tap-highlight() {
+  // Remove the unwanted box around interactive elements, e.g. AUI button:
+  // http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
