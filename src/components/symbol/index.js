@@ -1,7 +1,0 @@
-import './symbol'
-import '@src/assets/icons/cs-chrome.svg'
-import '@src/assets/icons/cs-facebook.svg'
-import '@src/assets/icons/cs-firefox.svg'
-import '@src/assets/icons/cs-github.svg'
-import '@src/assets/icons/cs-instagram.svg'
-import '@src/assets/icons/cs-xing.svg'

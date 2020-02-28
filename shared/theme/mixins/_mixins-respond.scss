@@ -1,0 +1,85 @@
+/**
+ * Respond-to provides an easy breakpoint handling with semantic reading of
+ * media queries.
+ *
+ * Respond to breakpoint `s` (= 576px):
+ * @include cs-respond-to(s) {…}
+ * -> @media (min-width: 576px) {…}
+ *
+ * Respond to breakpoint `m: 992px`:
+ * @include cs-respond-to(m) {…}
+ * -> @media (min-width: 992px) {…}
+ *
+ * Respond up to breakpoint `l: 1280px`:
+ * @include cs-respond-to(l max) {…}
+ * -> @media (max-width: 1279px) {…}
+ *
+ * Respond between breakpoints `m: 992px` and `xl: 1600px`
+ * @include cs-respond-to(m xl) {…}
+ * -> @media (min-width: 992px) and (max-width: 1699px) {…}
+ */
+
+@mixin cs-respond-to($-breakpoint, $-breakpoints: $cs-breakpoints) {
+  $-query: false;
+
+  @if type-of($-breakpoint) == string {
+    // One single breakpoint
+    @if map-has-key($-breakpoints, $-breakpoint) {
+      $-query: "(min-width: #{map-get($-breakpoints, $-breakpoint)})";
+    }
+
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$-breakpoint}`. " + "Available breakpoints are: #{map-keys($-breakpoints)}.";
+    }
+  }
+
+  @else if type-of($-breakpoint) == list {
+    $-isMaxWidth: false;
+    $-min: false;
+    $-max: false;
+
+    @each $-item in $-breakpoint {
+      @if $-item == max {
+        $-isMaxWidth: true;
+      }
+
+      @else {
+        @if map-has-key($-breakpoints, $-item) {
+          @if $-min == false {
+            $-min: map-get($-breakpoints, $-item);
+          }
+
+          @else {
+            $-max: map-get($-breakpoints, $-item) - 1px;
+          }
+        }
+
+        @else {
+          @warn "Unfortunately, no value could be retrieved from `#{$-item}`. " + "Available breakpoints are: #{map-keys($-breakpoints)}.";
+        }
+      }
+    }
+
+    @if $-min and $-max {
+      $-query: "(min-width: #{$-min}) and (max-width: #{$-max})";
+    }
+
+    @else if $-min {
+      @if $-isMaxWidth {
+        $-query: "(max-width: #{$-min - 1px})";
+      }
+    }
+
+    @else {
+      @warn "Unfortunately, no value found";
+    }
+  }
+
+  @if $-query {
+    $-query: "screen and #{$-query}";
+
+    @media #{$-query} {
+      @content;
+    }
+  }
+}
