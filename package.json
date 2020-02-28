@@ -44,6 +44,8 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
     "git-branch-is": "^3.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
