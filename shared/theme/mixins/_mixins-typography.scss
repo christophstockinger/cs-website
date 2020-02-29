@@ -1,3 +1,22 @@
+@mixin cs-typography-h3 {
+  & {
+    font-family: $cs-font;
+
+    @each $-key, $-value in $cs-font-h3 {
+      @if map-has-key($cs-breakpoints, $-key) {
+        @include cs-respond-to($-key) {
+          font-size: map-get($-value, fs);
+          line-height: map-get($-value, lh);
+        }
+      }
+
+      @else {
+        font-size: map-get($-value, fs);
+        line-height: map-get($-value, lh);
+      }
+    }
+  }
+}
 
 @mixin cs-typography-paragraph {
   & {
