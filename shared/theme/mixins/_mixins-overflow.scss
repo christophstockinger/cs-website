@@ -1,9 +1,0 @@
-@mixin cs-text-overflow($ellipsis: true) {
-  overflow: hidden; // [1]
-
-  @if $ellipsis {
-    text-overflow: ellipsis;
-  }
-
-  white-space: nowrap; // [1]
-}

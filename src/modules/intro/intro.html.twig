@@ -1,0 +1,19 @@
+<section class="mIntro{% for modifier in modifiers %} mIntro--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  <div class="mIntro__wrapper">
+    <div class="mIntro__container">
+      <div class="mIntro__richtext">
+        {% if headline %}
+          {% include './../../components/headline/headline.html.twig' with headline %}
+        {% endif %}
+        {% if subline %}
+          {% include './../../components/headline/headline.html.twig' with subline %}
+        {% endif %}
+        {% if paragraphs.length > 0 %}
+          {% for paragraph in paragraphs %}
+            {% include './../../components/paragraph/paragraph.html.twig' with paragraph only %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

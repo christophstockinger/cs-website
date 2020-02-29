@@ -1,0 +1,62 @@
+{% extends './layout/document/document.html.twig' %}
+
+{% block body %}
+  {% embed './layout/page/page.html.twig' %}
+  {% block page %}
+    {% include './modules/header/header.html.twig' with {
+      logo: {
+        url: '/',
+        image: {
+          src: 'assets/images/cs-wortmarke.svg',
+          alt: 'CHRISTOPH STOCKINGER'
+        }
+      }
+    } %}
+
+    {% embed './layout/main/main.html.twig' %}
+    {% block main %}
+      {% include './modules/intro/intro.html.twig' with {
+        modifiers: ['noDeco'],
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          xclasses: ['mIntro__headline'],
+          content: '500'
+        },
+        subline: {
+          tag: 'h2',
+          modifiers: ['h2'],
+          xclasses: ['mIntro__subline'],
+          content: 'Wo bist du den gelandet?'
+        },
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mIntro__paragraph'],
+            content: '<a href="/" class="cAnker">Go back to my webseite</a>'
+          }
+        ]
+      } %}
+    {% endblock main %}
+    {% endembed %}
+
+    {% include './modules/footer/footer.html.twig' with {
+      modifiers: ['noDeco'],
+      navigation: {
+        items: [
+          {
+            url: 'imprint.html',
+            content: 'Imprint'
+          }
+        ],
+        xclasses:['mFooter__navigation']
+      },
+      copyright: {
+        content: '&copy; 2018 Christoph Stockinger',
+        modifiers: ['small'],
+        xclasses: ['mFooter__copyright']
+      }
+    } only %}
+  {% endblock page %}
+  {% endembed %}
+{% endblock body %}

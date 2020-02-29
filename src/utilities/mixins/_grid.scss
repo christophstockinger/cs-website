@@ -1,0 +1,107 @@
+// Grid Mixing
+
+/**
+ * Create an grid wrapper, which can have a max-width and would be centered.
+ */
+@mixin gridWrapper {
+  width: 100%;
+  max-width: $content-maxWidth;
+  padding-right: $gridWrapper-padding--smallDevices;
+  padding-left: $gridWrapper-padding--smallDevices;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to(l) {
+    padding-right: $gridWrapper-padding;
+    padding-left: $gridWrapper-padding;
+  }
+
+  // To prevent overflow
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+/**
+ * Create an grid container, which contains grid cells.
+ * You can compare it with Susy's `container` mixin in some way.
+ */
+@mixin gridContainer {
+  $_margin: $gridGutters / -2;
+
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  min-width: 100%;
+  margin-right: $_margin;
+  margin-left: $_margin;
+}
+
+/**
+ * Create an grid cell, which spans to x columns.
+ * You can compare it with Susy's `span` mixin in some way.
+ * @param {number} $_columns number of columns the cell spans.
+ * @param {number} $_total-columns total number of columns.
+ */
+@mixin gridCell($_columns: 0, $_total-columns: $gridColumns) {
+  $_padding: $gridGutters / 2;
+
+  position: relative;
+  flex: 0 0 auto;
+  padding-right: $_padding;
+  padding-left: $_padding;
+
+  @if $_columns > 0 {
+    @include gridCellSize($_columns, $_total-columns);
+  }
+}
+
+/**
+ * Offset a grid cell to the right.
+ * You can compare it with Susy's `pre` mixin in some way.
+ * @param {number} $_columns number of columns to offset.
+ */
+@function gridPre($_columns: 1, $_total-columns: $gridColumns) {
+  @return $_columns / $_total-columns * 100%;
+}
+
+@mixin gridPre($_columns: 1, $_total-columns: $gridColumns) {
+  margin-left: gridPre($_columns, $_total-columns);
+}
+
+/**
+ * Add margin to the right of a grid cell.
+ * You can compare it with Susy's `post` mixin in some way.
+ * @param {number} $_columns number of columns margin should be added.
+ */
+@function gridPost($_columns: 1, $_total-columns: $gridColumns) {
+  @return $_columns / $gridColumns * 100%;
+}
+
+@mixin gridPost($_columns: 1, $_total-columns: $gridColumns) {
+  margin-right: gridPost($_columns, $_total-columns);
+}
+
+/**
+ * Size the grid cell.
+ * @param {number} $_columns number of columns the cell spans.
+ * @param {number} $_total-columns total number of columns.
+ */
+@mixin gridCellSize($_columns: 1, $_total-columns: $gridColumns) {
+  $_width: gridCellSize($_columns, $_total-columns);
+
+  width: $_width;
+  max-width: $_width;
+}
+
+/**
+ * Calculate the size of a grid cell, which spans to x columns.
+ * @param {number} $_columns number of columns the cell spans.
+ * @param {number} $_total-columns total number of columns.
+ */
+@function gridCellSize($_columns: 1, $_total-columns: $gridColumns) {
+  @return $_columns / $_total-columns * 100%;
+}

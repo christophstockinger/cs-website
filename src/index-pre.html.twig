@@ -1,0 +1,116 @@
+{% extends './layout/document/document.html.twig' %}
+
+{% block body %}
+  {% embed './layout/page/page.html.twig' %}
+  {% block page %}
+    {% include './modules/header/header.html.twig' with {
+      logo: {
+        modifiers: ['scroller'],
+        url: '#top',
+        image: {
+          src: 'assets/images/cs-wortmarke.svg',
+          alt: 'CHRISTOPH STOCKINGER'
+        }
+      }
+    } %}
+
+    {% embed './layout/main/main.html.twig' %}
+    {% block main %}
+      {% include './modules/intro/intro.html.twig' with {
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          xclasses: ['mIntro__headline'],
+          content: 'Hi, I am Christoph'
+        },
+        subline: {
+          tag: 'h2',
+          modifiers: ['h2'],
+          xclasses: ['mIntro__subline'],
+          content: 'Web Developer and Digital Designer'
+        },
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mIntro__paragraph'],
+            content: '
+              Currently I am working as a Software Developer with a focus on frontend development at the startup <a class="cAnker" href="https://www.easy2parts.com">Easy2Parts</a> in Deggendorf.
+              <br>Before that, I worked as a web developer at <a class="cAnker" href="https://www.strichpunkt-design.de">Strichpunkt Design</a> in Stuttgart for clients such as the German Football Association and DHL.
+              <br>I also successfully completed my studies at <a class="cAnker" href="https://www.th-deg.de">Deggendorf Institute of Technology</a> at the beginning of 2019. My thesis was about a technical translation of a brand architecture into a digital UI kit.
+              <br>I also work as a freelance web developer for my label <a class="cAnker" href="http://www.coding77.de">Coding77</a> and Digital Designer.
+            '
+          },
+          {
+            modifiers: [],
+            xclasses: ['mIntro__paragraph'],
+            content: '
+              In addition to my professional work, I am a football referee at the Bavarian Football Association. In addition, I work in my spare time as a hobby DJ.
+            '
+          }
+        ]
+      } %}
+      {% include './modules/knowledge/knowledge.html.twig' with {
+        modifiers: ['grey'],
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mKnowledge__paragraph'],
+            content: '
+            During my studies I was able to extend my self-learned knowledge in HTML, (S)CSS, ES6 (Javascript) and PHP (Laravel-Framework). In relation with my job career and my own projects I learned how to use Webpack, NodeJS, VueJs and Twig. In addition I was able to extend my knowledge in different CMS systems like Wordpress, October CMS, CraftCMS.
+            <br>In addition, I have acquired sound knowledge for the creation of a UI kit (with the Fractal Framework) according to the Atomic Design Principle of Brad Frost.'
+          }
+        ]
+      } %}
+      {% include './modules/image/image.html.twig' with {
+        image: {
+          src: '/assets/images/christoph-stockinger-1.jpg',
+          alt: 'Christoph Stockinger Portrait'
+        }
+      } %}
+      {% include './modules/contact/contact.html.twig' with {
+        modifiers: ['grey'],
+        paragraphs: [
+          {
+            modifiers: [],
+            xclasses: ['mContact__paragraph'],
+            content: 'You want to work with me or a website of mine, then get in touch with me:'
+          }
+        ],
+        contactdata: [
+          {
+            type: 'email',
+            content: 'hello@christophstockinger.de',
+            xclasses: ['mContact__email'],
+          },
+          {
+            type: 'number',
+            content: '+49 (0) 160 1899824',
+            xclasses: ['mContact__mobil'],
+          }
+        ]
+      } %}
+      {% include './modules/no-ie/no-ie.html--shadow.twig' with {
+        modifiers: ['shadow']
+      } only %}
+    {% endblock main %}
+    {% endembed %}
+
+    {% include './modules/footer/footer.html.twig' with {
+      navigation: {
+        items: [
+          {
+            url: 'imprint.html',
+            content: 'Imprint'
+          }
+        ],
+        xclasses:['mFooter__navigation']
+      },
+      copyright: {
+        content: '&copy; 2018 Christoph Stockinger',
+        modifiers: ['small'],
+        xclasses: ['mFooter__copyright']
+      }
+    } only %}
+  {% endblock page %}
+  {% endembed %}
+{% endblock body %}

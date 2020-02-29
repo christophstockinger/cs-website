@@ -1,0 +1,17 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+.cButtonGroup {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+
+  * {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
