@@ -51,11 +51,11 @@ $cs-font-h2: (
 // H3
 $cs-font-h3: (
   default: (
-    fs: 1.375rem,
+    fs: 1.125rem,
     lh: 1.1
   ),
   s: (
-    fs: 1.75rem,
+    fs: 1.125rem,
     ls: 1.1
   ),
   m: (
@@ -63,11 +63,11 @@ $cs-font-h3: (
     lh: 1.1
   ),
   l: (
-    fs: 2.25rem,
+    fs: 2rem,
     lh: 1
   ),
   xl: (
-    fs: 3rem,
+    fs: 2rem,
     lh: 1
   )
 ) !default;
@@ -150,12 +150,20 @@ $cs-font-p: (
     fs: 1rem,
     lh: 1.5
   ),
-  m: (
+  s: (
     fs: 1rem,
     lh: 1.5
   ),
+  m: (
+    fs: 1.5rem,
+    lh: 1.5
+  ),
   l: (
-    fs: 1rem,
+    fs: 1.5rem,
+    lh: 1.5
+  ),
+  xl: (
+    fs: 1.5rem,
     lh: 1.5
   ),
 ) !default;
