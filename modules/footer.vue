@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     openLegalNoticeLightbox() {
+      // eslint-disable-next-line
       console.log('hallo 👋🏻')
     }
   }
@@ -92,6 +93,8 @@ export default {
   &-legalNavigation {
     @include cs-grid-cell(12);
 
+    margin-top: $cs-spacing-m;
+
     @include cs-respond-to(s) {
       @include cs-grid-cell(12);
     }
@@ -105,8 +108,14 @@ export default {
     }
   }
 
-  &-legal {
-    //
+  &-legalButton {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include cs-respond-to(m) {
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 }
 </style>
