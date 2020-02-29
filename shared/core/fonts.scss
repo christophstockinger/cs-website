@@ -1,0 +1,27 @@
+$-fonts: './fonts/';
+
+// Rajdhani Regular
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$-fonts}rajdhani-regular.eot');
+  src:
+    url('#{$-fonts}rajdhani-regular.eot?#iefix') format('eot'),
+    url('#{$-fonts}rajdhani-regular.woff2') format('woff2'),
+    url('#{$-fonts}rajdhani-regular.woff') format('woff'),
+    url('#{$-fonts}rajdhani-regular.ttf') format('truetype');
+}
+
+// Rajdhani Bold
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$-fonts}rajdhani-bold.eot');
+  src:
+    url('#{$-fonts}rajdhani-bold.eot?#iefix') format('eot'),
+    url('#{$-fonts}rajdhani-bold.woff2') format('woff2'),
+    url('#{$-fonts}rajdhani-bold.woff') format('woff'),
+    url('#{$-fonts}rajdhani-bold.ttf') format('truetype');
+}

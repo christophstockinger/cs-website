@@ -1,0 +1,217 @@
+// CS Typography Styles
+
+// H1
+$cs-font-h1: (
+  default: (
+    fs: 2rem,
+    lh: 1.1
+  ),
+  s: (
+    fs: 2.25rem,
+    lh: 1.1
+  ),
+  m: (
+    fs: 3rem,
+    lh: 1.1
+  ),
+  l: (
+    fs: 3.5rem,
+    lh: 1.1
+  ),
+  xl: (
+    fs: 4rem,
+    lh: 1.1
+  )
+) !default;
+
+// H2
+$cs-font-h2: (
+  default: (
+    fs: 1.625rem,
+    lh: 1.1
+  ),
+  s: (
+    fs: 2rem,
+    lh: 1.1
+  ),
+  m: (
+    fs: 2.5rem,
+    lh: 1.1
+  ),
+  l: (
+    fs: 3rem,
+    lh: 1.1
+  ),
+  xl: (
+    fs: 3rem,
+    lh: 1.1
+  )
+) !default;
+
+// H3
+$cs-font-h3: (
+  default: (
+    fs: 1.375rem,
+    lh: 1.1
+  ),
+  s: (
+    fs: 1.75rem,
+    ls: 1.1
+  ),
+  m: (
+    fs: 2rem,
+    lh: 1.1
+  ),
+  l: (
+    fs: 2.25rem,
+    lh: 1
+  ),
+  xl: (
+    fs: 3rem,
+    lh: 1
+  )
+) !default;
+
+// H4
+$cs-font-h4: (
+  default: (
+    fs: 1.25rem,
+    lh: 1.25
+  ),
+  s:(
+    fs: 1.5rem,
+    lh: 1.25
+  ),
+  m: (
+    fs: 1.5rem,
+    lh: 1.285
+  ),
+  l: (
+    fs: 1.5rem,
+    lh: 1.4
+  ),
+  xl: (
+    fs: 2rem,
+    lh: 1.4
+  )
+) !default;
+
+// H5
+$cs-font-h5: (
+  default: (
+    fs: 1.15rem,
+    lh: 1.35
+  ),
+  s: (
+    fs: 1.15rem,
+    lh: 1.35
+  ),
+  m: (
+    fs: 1.15rem,
+    lh: 1.35
+  ),
+  l: (
+    fs: 1.125rem,
+    lh: 1.35
+  ),
+  xl: (
+    fs: 1.25rem,
+    lh: 1.35
+  )
+) !default;
+
+// H6
+$cs-font-h6: (
+  default: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  s: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  m: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  l: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  xl: (
+    fs: 1rem,
+    lh: 1.5
+  )
+) !default;
+
+// P - Normal
+$cs-font-p: (
+  default: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  m: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+  l: (
+    fs: 1rem,
+    lh: 1.5
+  ),
+) !default;
+
+// P - Big
+$cs-font-p-big: (
+  default: (
+    fs: 1.15rem,
+    lh: 1.5
+  ),
+  m:  (
+    fs: 1.15rem,
+    lh: 1.5
+  ),
+  l:  (
+    fs: 1.125rem,
+    lh: 1.5
+  ),
+) !default;
+
+// P - Small
+$cs-font-p-small: (
+  default: (
+    fs: 0.75rem,
+    lh: 1.5
+  ),
+  m:  (
+    fs: 0.75rem,
+    lh: 1.5
+  ),
+  l:  (
+    fs: 0.75rem,
+    lh: 1.5
+  ),
+) !default;
+
+// Button
+$cs-font-button: (
+  default: (
+    fs: 0.75rem,
+    lh: 1
+  ),
+  s:  (
+    fs: 0.75rem,
+    lh: 1
+  ),
+  m:  (
+    fs: 1rem,
+    lh: 1
+  ),
+  l:  (
+    fs: 1rem,
+    lh: 1
+  ),
+  xl:  (
+    fs: 1rem,
+    lh: 1
+  ),
+) !default;
