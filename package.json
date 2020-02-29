@@ -27,6 +27,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/svg-sprite": "^0.4.9",
+    "lodash": "^4.17.15",
     "nuxt": "^2.0.0",
     "nuxt-babel": "^1.0.1"
   },
