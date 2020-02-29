@@ -10,7 +10,7 @@ $cs-font-weight-bold: 700;
 
 // CS Colors
 $cs-color-green: #00ae2f;
-// $cs-color-darkgreen: #005000;
+$cs-color-darkgreen: #005000;
 $cs-color-black: #0a0a0a;
 $cs-color-grey: #d8d8d8;
 $cs-color-white: #fff;
@@ -32,9 +32,11 @@ $cs-max-content-width: 1280px !default;
 $cs-grid-columns-default: 12 !default;
 
 $cs-grid-wrapper-padding: (
-  xs: 5%,
-  s: 5%,
-  m: 5%,
+  xs: 28px,
+  s: 28px,
+  m: (
+    20px / 320px
+  ) / 2,
   l: (
     20px / 320px
   ) / 2 * 100%,
@@ -65,3 +67,15 @@ $cs-smallestGridBreakpoint: xs;
 // CS Animation & Transition
 $cs-transition-timing-function: ease-in-out;
 $cs-transition-duration: 400ms;
+
+// CS Spacings
+$cs-spacing-xxxs: 4px;
+$cs-spacing-xxs: 8px;
+$cs-spacing-xs: 12px;
+$cs-spacing-s: 16px;
+$cs-spacing-m: 24px;
+$cs-spacing-l: 32px;
+$cs-spacing-xl: 48px;
+$cs-spacing-xxl: 64px;
+$cs-spacing-xxxl: 80px;
+
