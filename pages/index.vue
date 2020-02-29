@@ -1,5 +1,10 @@
 <template>
   <div class="cs-l-Content">
+    <m-about
+      v-if="content"
+      :headline="content.cvHeadline"
+      :description="content.cvDescription"
+    ></m-about>
     <m-social-media
       v-if="general.social"
       :data="general.social"
@@ -8,10 +13,12 @@
 </template>
 
 <script>
+import mAbout from '~/modules/about.vue'
 import mSocialMedia from '~/modules/social-media.vue'
 
 export default {
   components: {
+    'm-about': mAbout,
     'm-social-media': mSocialMedia
   },
   asyncData(context) {
