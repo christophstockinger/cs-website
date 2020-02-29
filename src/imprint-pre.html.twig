@@ -1,0 +1,133 @@
+{% extends './layout/document/document.html.twig' %}
+
+{% block body %}
+  {% embed './layout/page/page.html.twig' %}
+  {% block page %}
+    {% include './modules/header/header.html.twig' with {
+      logo: {
+          url: '/',
+          image: {
+            src: 'assets/images/cs-wortmarke.svg',
+            alt: 'CHRISTOPH STOCKINGER'
+          }
+        }
+    } %}
+
+    {% embed './layout/main/main.html.twig' %}
+    {% block main %}
+      {% include './modules/imprint/imprint.html.twig' with {
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          xclasses: ['mImprint__headline'],
+          content: 'Imprint'
+        },
+        paragraphs: [
+          {
+            modifiers: ['bold'],
+            xclasses: ['mImprint__paragraph'],
+            content: 'According to §5 TMG'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: 'Christoph Stockinger'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: 'Stephan-Waid-Weg 18'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: '70327 Stuttgart'
+          },
+          {
+            modifiers: ['bold', 'topSpacing'],
+            xclasses: ['mImprint__paragraph'],
+            content: 'Responsible for the content'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: 'Christoph Stockinger'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: 'E-Mail: <a class="cAnker" href="mailto:hello@christophstockinger.de">hello@christophstockinger.de</a>'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mImprint__paragraph'],
+            content: 'Telefon: <span class="cAnker">+ 49 (0) 160 1899824</span>'
+          }
+        ]
+      } %}
+      {% include './modules/data-protection/data-protection.html.twig' with {
+        modifiers: ['grey'],
+        headline: {
+          tag: 'h1',
+          modifiers: ['h1'],
+          xclasses: ['mDataProtection__headline'],
+          content: 'Data protection'
+        },
+        paragraphs: [
+          {
+            modifiers: ['bold'],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Matomo'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Diese Website benutzt den Open Source Webanalysedienst Matomo. Matomo verwendet so genannte "Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Dazu werden die durch den Cookie erzeugten Informationen über die Benutzung dieser Website auf unserem Server gespeichert. Die IP-Adresse wird vor der Speicherung anonymisiert.'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Matomo-Cookies verbleiben auf Ihrem Endgerät, bis Sie sie löschen.'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Die Speicherung von Matomo-Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der anonymisierten Analyse des Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren.'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Die durch den Cookie erzeugten Informationen über die Benutzung dieser Website werden nicht an Dritte weitergegeben. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.'
+          },
+          {
+            modifiers: [],
+            xclasses: ['mDataProtection__paragraph'],
+            content: 'Wenn Sie mit der Speicherung und Nutzung Ihrer Daten nicht einverstanden sind, können Sie die Speicherung und Nutzung hier deaktivieren. In diesem Fall wird in Ihrem Browser ein Opt-Out-Cookie hinterlegt, der verhindert, dass Matomo Nutzungsdaten speichert. Wenn Sie Ihre Cookies löschen, hat dies zur Folge, dass auch das Matomo Opt-Out-Cookie gelöscht wird. Das Opt-Out muss bei einem erneuten Besuch unserer Seite wieder aktiviert werden.'
+          }
+        ]
+      } %}
+      {% include './modules/no-ie/no-ie.html--shadow.twig' with {
+        modifiers: ['shadow']
+      } only %}
+    {% endblock main %}
+    {% endembed %}
+
+    {% include './modules/footer/footer.html.twig' with {
+      navigation: {
+        items: [
+          {
+            url: 'imprint.html',
+            content: 'Imprint'
+          }
+        ],
+        xclasses:['mFooter__navigation']
+      },
+      copyright: {
+        content: '&copy; 2018 Christoph Stockinger',
+        modifiers: ['small'],
+        xclasses: ['mFooter__copyright']
+      }
+    } only %}
+  {% endblock page %}
+  {% endembed %}
+{% endblock body %}

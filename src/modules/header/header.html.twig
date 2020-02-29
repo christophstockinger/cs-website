@@ -1,0 +1,9 @@
+<header class="mHeader{% for modifier in modifiers %} mHeader--{{modifier}}{% endfor %}{% for xclass in xclasses %} {{xclass}}{% endfor %}">
+  <div class="mHeader__wrapper">
+    <div class="mHeader__container">
+      <div class="mHeader__logo">
+        {% include './../../components/logo/logo.html.twig' with logo only %}
+      </div>
+    </div>
+  </div>
+</header>

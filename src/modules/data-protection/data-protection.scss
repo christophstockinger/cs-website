@@ -1,0 +1,39 @@
+@import '~@util/theme/theme';
+@import '~@util/theme/mixins';
+
+.mDataProtection {
+  @include section;
+
+  &__richtext {
+    @include gridCell(10);
+    @include gridPost(2);
+
+    @include respond-to(xs) {
+      @include gridCell(8);
+      @include gridPre(1);
+      @include gridPost(3);
+    }
+
+    @include respond-to(s) {
+      @include gridCell(6);
+      @include gridPre(2);
+      @include gridPost(4);
+    }
+  }
+
+  &__headline {
+    margin-bottom: 0.625rem;
+
+    @include respond-to(l) {
+      margin-bottom: 1.5625rem;
+    }
+  }
+
+  &__subline {
+    margin-bottom: 3.25rem;
+  }
+
+  &__paragraph {
+    margin-bottom: 0;
+  }
+}
