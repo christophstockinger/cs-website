@@ -28,7 +28,8 @@ export default {
   css: [
     '~/shared/core/reset.scss',
     '~/shared/core/fonts.scss',
-    '~/shared/core/base.scss'
+    '~/shared/core/base.scss',
+    '~/shared/core/symbol.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -82,6 +83,6 @@ export default {
     input: '~/shared/icons',
     output: '~/assets',
     defaultSprite: 'sprite',
-    elementClass: 'e2p-Symbol'
+    elementClass: 'cs-c-Symbol'
   }
 }
