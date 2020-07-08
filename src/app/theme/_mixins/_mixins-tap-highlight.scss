@@ -1,0 +1,14 @@
+/**
+ * Removing the tap highlight color on touch devices
+ * http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ *
+ * [1] Removing the tap highlight color on iOS
+ * [2] … and some Androids
+ */
+@mixin cs-remove-tap-highlight {
+  /* stylelint-disable */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: transparent; // [1]
+  -webkit-tap-highlight-color: transparent; // [2]
+  /* stylelint-enable */
+}
