@@ -1,8 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
 const postcssFlexBugs = require('postcss-flexbugs-fixes')
-
-const BROWSERS = ['last 2 versions', '>1%', 'IE 11']
+const path = require('path')
 
 const styleLoaders = (env = {}) => {
   const styleLoaders = []
@@ -13,20 +12,16 @@ const styleLoaders = (env = {}) => {
     })
   } else {
     styleLoaders.push({
-      loader: 'style-loader',
-      options: {
-        sourceMap: true,
-        convertToAbsoluteUrls: true
-      }
+      loader: 'style-loader'
     })
   }
 
   styleLoaders.push({
     loader: 'css-loader',
     options: {
+      url: true,
       sourceMap: true,
-      importLoaders: 2,
-      minimize: env.production
+      importLoaders: 2
     }
   })
 
@@ -34,12 +29,7 @@ const styleLoaders = (env = {}) => {
     loader: 'postcss-loader',
     options: {
       ident: 'postcss',
-      plugins: loader => [
-        autoprefixer({
-          browsers: BROWSERS
-        }),
-        postcssFlexBugs
-      ]
+      plugins: loader => [autoprefixer(), postcssFlexBugs]
     }
   })
 
@@ -47,6 +37,15 @@ const styleLoaders = (env = {}) => {
     loader: 'sass-loader',
     options: {
       sourceMap: true
+    }
+  })
+
+  styleLoaders.push({
+    loader: 'sass-resources-loader',
+    options: {
+      resources: [
+        path.join(__dirname, '../src/app/theme/theme.scss'),
+      ]
     }
   })
 

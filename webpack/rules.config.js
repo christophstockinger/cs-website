@@ -7,7 +7,12 @@ const rules = (env = {}) => {
   const rules = []
 
   rules.push({
-    test: /\.js$/,
+    test: /\.vue$/,
+    loader: 'vue-loader'
+  })
+
+  rules.push({
+    test: /\.(js)$/,
     exclude: /(node_modules)/,
     use: {
       loader: 'babel-loader',
@@ -28,19 +33,7 @@ const rules = (env = {}) => {
 
   rules.push({
     test: /\.(css|scss|sass)$/,
-    exclude: /node_modules/,
     use: styleLoaders
-  })
-
-  rules.push({
-    test: /\.svg$/,
-    include: [path.join(__dirname, '../src/assets/icons')],
-    use: {
-      loader: 'svg-sprite-loader',
-      options: {
-        extract: env.production
-      }
-    }
   })
 
   fileLoaders.forEach(fileLoader => {
