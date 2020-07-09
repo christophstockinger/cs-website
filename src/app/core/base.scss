@@ -27,6 +27,7 @@
   --mode-switcher-active-color: #{$cs-color-darkGreen};
   --selection-background-color: #{$cs-color-green};
   --selection-text-color: #{$cs-color-white};
+  --shadow-color: #{rgba($cs-color-black, 0.2)};
 }
 
 .cs-dark-mode,
@@ -54,6 +55,7 @@
   --mode-switcher-active-color: #{$cs-color-darkGreen};
   --selection-background-color: #{$cs-color-grey1};
   --selection-text-color: #{$cs-color-grey3};
+  --shadow-color: #{rgba($cs-color-grey1, 0.2)};
 }
 
 html {
