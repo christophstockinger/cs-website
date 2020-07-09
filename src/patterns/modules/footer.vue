@@ -36,6 +36,7 @@ export default {
   width: 100%;
   height: auto;
   margin-top: $cs-spacing-l;
+  margin-bottom: $cs-spacing-l;
 
   &-wrapper {
     @include cs-grid-wrapper;
