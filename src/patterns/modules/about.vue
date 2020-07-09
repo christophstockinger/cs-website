@@ -43,6 +43,9 @@
             >!</c-paragraph
           >
         </div>
+        <c-social-media-navigation
+          class="m-About-socialMmediaNavigation"
+        ></c-social-media-navigation>
       </div>
     </div>
   </section>
@@ -51,11 +54,13 @@
 <script>
 import cHeadline from '@cs/components/headline.vue'
 import cParagraph from '@cs/components/paragraph.vue'
+import cSocialMediaNavigation from '@cs/components/social-media-navigation.vue'
 
 export default {
   components: {
     'c-headline': cHeadline,
-    'c-paragraph': cParagraph
+    'c-paragraph': cParagraph,
+    'c-social-media-navigation': cSocialMediaNavigation
   }
 }
 </script>
@@ -123,6 +128,20 @@ export default {
 
     @include cs-active {
       color: var(--primary-link-active-color);
+    }
+  }
+
+  &-socialMmediaNavigation {
+    position: relative;
+    margin-top: $cs-spacing-l;
+    margin-bottom: $cs-spacing-l;
+
+    @include cs-respond-to(m) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
