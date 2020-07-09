@@ -92,7 +92,7 @@ export default {}
     transition-timing-function: $cs-transition-timing-function;
     transition-duration: $cs-transition-duration * 2;
     transition-property: transform;
-      transform: rotate(0);
+    transform: rotate(0);
 
     @include cs-hover {
       transform: rotate(-3deg);
