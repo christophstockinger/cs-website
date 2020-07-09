@@ -35,7 +35,7 @@ export default {
   width: 100%;
   height: auto;
 
-  @include cs-respond-to(m) {
+  @include cs-respond-to(s) {
     margin-top: $cs-spacing-xxl;
   }
 
@@ -67,14 +67,18 @@ export default {
     position: static;
     order: 2;
 
-    @include cs-respond-to(m) {
-      @include cs-grid-cell(9);
+    @include cs-respond-to(s) {
+      @include cs-grid-cell(8);
 
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-start;
       justify-content: flex-start;
       order: 1;
+    }
+
+    @include cs-respond-to(m) {
+      @include cs-grid-cell(9);
     }
   }
 
@@ -99,6 +103,10 @@ export default {
   &-welcome {
     margin-top: $cs-spacing-xl;
 
+    @include cs-respond-to(s) {
+      margin-top: $cs-spacing-xxxl + $cs-spacing-s;
+    }
+
     @include cs-respond-to(m) {
       margin-top: $cs-spacing-xxxl + $cs-spacing-s;
     }
@@ -112,16 +120,21 @@ export default {
     padding-right: 0;
     padding-left: 0;
 
-    @include cs-respond-to(m) {
-      @include cs-grid-cell(3);
+    @include cs-respond-to(s) {
+      @include cs-grid-cell(4);
 
       order: 2;
+    }
+
+    @include cs-respond-to(m) {
+      @include cs-grid-cell(3);
     }
   }
 
   &-avatar {
     @include cs-respond-to(m) {
       cursor: progress;
+      box-shadow: 0 0 24px var(--shadow-color);
       transition-timing-function: $cs-transition-timing-function;
       transition-duration: $cs-transition-duration;
       transition-property: transform;
