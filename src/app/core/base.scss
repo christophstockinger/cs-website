@@ -5,7 +5,7 @@
 :root,
 .cs-light-mode {
   --primary-background-color: #{$cs-color-white};
-  --secondary-background-color: #{$cs-color-green};
+  --secondary-background-color: #{rgba($cs-color-green, 0.8)};
   --primary-headline-color: #{$cs-color-green};
   --secondary-headline-color: #{$cs-color-black};
   --primary-paragraph-color: #{$cs-color-black};
@@ -19,7 +19,7 @@
   --icon-color: #{$cs-color-black};
   --icon-hover-color: #{$cs-color-green};
   --icon-active-color: #{$cs-color-darkGreen};
-  --quote-color: #{rgba($cs-color-grey2, 0.4)};
+  --quote-color: #{$cs-color-grey1};
   --logo-light-color: #{$cs-color-green};
   --logo-dark-color: #{$cs-color-black};
   --mode-switcher-color: #{$cs-color-black};
@@ -33,7 +33,7 @@
 .cs-dark-mode,
 .cs-dark-mode:root {
   --primary-background-color: #{$cs-color-black};
-  --secondary-background-color: #{$cs-color-grey3};
+  --secondary-background-color: #{rgba($cs-color-grey3, 0.8)};
   --primary-headline-color: #{$cs-color-white};
   --secondary-headline-color: #{$cs-color-grey2};
   --primary-paragraph-color: #{$cs-color-grey2};
