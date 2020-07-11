@@ -37,8 +37,12 @@
       font-size: $cs-font-size-h3-tablet;
     }
 
+    @include cs-respond-to(m) {
+      font-size: $cs-font-size-h3-desktop;
+    }
+
     @include cs-respond-to(l) {
-      font-size: $cs-font-size-h3;
+      font-size: $cs-font-size-h3-large;
     }
   }
 }
