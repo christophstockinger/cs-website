@@ -6,7 +6,9 @@
         <a
           class="c-SocialMediaNavigation-link"
           href="https://github.com/christophstockinger"
+          rel="noreferrer"
         >
+          <span class="c-SocialMediaNavigation-onlyScreenreader">Github-Profile von Christoph Stockinger</span>
           <svg
             class="c-SocialMediaNavigation-svg"
             viewBox="0 0 32 32"
@@ -27,7 +29,9 @@
         <a
           class="c-SocialMediaNavigation-link"
           href="https://www.linkedin.com/in/christoph-stockinger-8601b416b/"
+          rel="noreferrer"
         >
+          <span class="c-SocialMediaNavigation-onlyScreenreader">Linkedin-Profile von Christoph Stockinger</span>
           <svg
             class="c-SocialMediaNavigation-svg"
             viewBox="0 0 30 29"
@@ -48,7 +52,9 @@
         <a
           class="c-SocialMediaNavigation-link"
           href="https://www.facebook.com/christophstockinger.de"
+          rel="noreferrer"
         >
+          <span class="c-SocialMediaNavigation-onlyScreenreader">Facebook-Profile von Christoph Stockinger</span>
           <svg
             class="c-SocialMediaNavigation-svg"
             viewBox="0 0 32 32"
@@ -69,7 +75,9 @@
         <a
           class="c-SocialMediaNavigation-link"
           href="https://www.instagram.com/christophstockinger.de/"
+          rel="noreferrer"
         >
+          <span class="c-SocialMediaNavigation-onlyScreenreader">Instagramm-Account von Christoph Stockinger</span>
           <svg
             class="c-SocialMediaNavigation-svg"
             viewBox="0 0 32 32"
@@ -94,7 +102,9 @@
         <a
           class="c-SocialMediaNavigation-link"
           href="https://www.xing.com/profile/Christoph_Stockinger3"
+          rel="noreferrer"
         >
+          <span class="c-SocialMediaNavigation-onlyScreenreader">Xing-Profile von Christoph Stockinger</span>
           <svg
             class="c-SocialMediaNavigation-svg"
             viewBox="0 0 32 32"
@@ -153,7 +163,7 @@ export default {
     justify-content: center;
     width: 32px;
     height: 32px;
-    margin-right: $cs-spacing-l;
+    margin-right: $cs-spacing-m;
     margin-bottom: 0;
 
     &:last-child {
@@ -162,7 +172,7 @@ export default {
 
     @include cs-respond-to(m) {
       margin-right: 0;
-      margin-bottom: $cs-spacing-l;
+      margin-bottom: $cs-spacing-m;
 
       &:last-child {
         margin-bottom: 0;
@@ -194,6 +204,10 @@ export default {
     width: 100%;
     height: 100%;
     color: inherit;
+  }
+
+  &-onlyScreenreader {
+    display: none;
   }
 }
 </style>

@@ -27,7 +27,7 @@ export default {}
     width: 80px;
     height: 8px;
     content: '';
-    background-color: currentColor;
+    background-color: var(--primary-headline-color);
     transition-timing-function: $cs-transition-timing-function;
     transition-duration: $cs-transition-duration;
     transition-property: background-color;
