@@ -9,23 +9,47 @@
           <c-logo></c-logo>
         </div>
         <nav class="m-Footer-navigation">
-          <router-link class="m-Footer-link" to="/imprint"
-            >Legal Notice</router-link
-          >
+          <button class="m-Footer-button" @click="open()">Legal Notice</button>
         </nav>
       </div>
     </div>
+    <c-legal-notice
+      class="m-Footer-legalNotice"
+      ref="legalNotice"
+    ></c-legal-notice>
   </footer>
 </template>
 
 <script>
+import { onMounted, ref } from 'vue'
+
 import cLogo from '@cs/components/logo.vue'
 import cModeSwitchter from '@cs/components/mode-switcher.vue'
+import cLegalNotice from '@cs/components/legal-notice.vue'
 
 export default {
   components: {
     'c-logo': cLogo,
-    'c-mode-switcher': cModeSwitchter
+    'c-mode-switcher': cModeSwitchter,
+    'c-legal-notice': cLegalNotice
+  },
+  setup() {
+    const legalNotice = ref(null)
+
+    onMounted(() => {
+      console.log(legalNotice.value)
+    })
+
+    const open = () => {
+      if (legalNotice.value) {
+        legalNotice.value.open()
+      }
+    }
+
+    return {
+      legalNotice,
+      open
+    }
   }
 }
 </script>
@@ -38,8 +62,20 @@ export default {
   margin-top: $cs-spacing-l;
   margin-bottom: $cs-spacing-l;
 
+  @include cs-respond-to(s) {
+    margin-bottom: 0;
+  }
+
+  @include cs-respond-to(xl) {
+    margin-top: $cs-spacing-xxl;
+  }
+
   &-wrapper {
     @include cs-grid-wrapper;
+
+    transition-timing-function: $cs-transition-timing-function;
+    transition-duration: $cs-transition-duration;
+    transition-property: opacity;
   }
 
   &-container {
@@ -100,12 +136,19 @@ export default {
     }
   }
 
-  &-link {
+  &-button {
     @include cs-typography-paragraph-small;
 
     display: block;
+    padding: 0;
+    margin: 0;
     color: var(--primary-paragraph-color);
     text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 0;
     transition-timing-function: $cs-transition-timing-function;
     transition-duration: $cs-transition-duration;
     transition-property: color;
@@ -116,6 +159,22 @@ export default {
 
     @include cs-active {
       color: var(--primary-link-active-color);
+    }
+  }
+
+  @at-root {
+    body.has-open-legal {
+      .m-Footer-wrapper  {
+        opacity: 0.3;
+      }
+    }
+
+    .cs-dark-mode {
+      body.has-open-legal {
+        .m-Footer-wrapper  {
+          opacity: 0.6;
+        }
+      }
     }
   }
 }
