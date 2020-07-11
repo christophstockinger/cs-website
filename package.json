@@ -8,6 +8,7 @@
     "build": "npm run clean && npm run production",
     "dev": "webpack --env.development",
     "production": "webpack --env.production",
+    "deploy": "npm run build && firebase deploy",
     "clean": "rimraf ./dist",
     "stylelint": "stylelint src/**/*.{css,scss}",
     "lint": "eslint './src/**/*.js' --config .eslintrc.json",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/christophstockinger/cs-website#readme",
   "dependencies": {
+    "body-scroll-lock": "^3.0.3",
     "universal-cookie": "^4.0.3",
     "vue": "^3.0.0-beta.18",
     "vue-router": "^4.0.0-beta.1"
