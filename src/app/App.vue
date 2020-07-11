@@ -1,10 +1,5 @@
 <template>
   <component :is="state.layout"></component>
-  <!-- <div>
-    <p>ref: {{ countRef }}</p>
-    <p>reactive: {{ state.count }}</p>
-    <button @click="increment()">increment</button>
-  </div> -->
 </template>
 
 <script>
