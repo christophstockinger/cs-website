@@ -7,6 +7,7 @@
           class="c-SocialMediaNavigation-link"
           href="https://github.com/christophstockinger"
           rel="noreferrer"
+          target="_blank"
         >
           <span class="c-SocialMediaNavigation-onlyScreenreader">Github-Profile von Christoph Stockinger</span>
           <svg
@@ -30,6 +31,7 @@
           class="c-SocialMediaNavigation-link"
           href="https://www.linkedin.com/in/christoph-stockinger-8601b416b/"
           rel="noreferrer"
+          target="_blank"
         >
           <span class="c-SocialMediaNavigation-onlyScreenreader">Linkedin-Profile von Christoph Stockinger</span>
           <svg
@@ -53,6 +55,7 @@
           class="c-SocialMediaNavigation-link"
           href="https://www.facebook.com/christophstockinger.de"
           rel="noreferrer"
+          target="_blank"
         >
           <span class="c-SocialMediaNavigation-onlyScreenreader">Facebook-Profile von Christoph Stockinger</span>
           <svg
@@ -76,6 +79,7 @@
           class="c-SocialMediaNavigation-link"
           href="https://www.instagram.com/christophstockinger.de/"
           rel="noreferrer"
+          target="_blank"
         >
           <span class="c-SocialMediaNavigation-onlyScreenreader">Instagramm-Account von Christoph Stockinger</span>
           <svg
@@ -103,6 +107,7 @@
           class="c-SocialMediaNavigation-link"
           href="https://www.xing.com/profile/Christoph_Stockinger3"
           rel="noreferrer"
+          target="_blank"
         >
           <span class="c-SocialMediaNavigation-onlyScreenreader">Xing-Profile von Christoph Stockinger</span>
           <svg

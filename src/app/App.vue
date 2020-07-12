@@ -1,5 +1,5 @@
 <template>
-  <component :is="state.layout"></component>
+  <component :is="layout"></component>
 </template>
 
 <script>
@@ -14,29 +14,12 @@ export default {
   },
   setup() {
     const route = useRoute()
-    const state = reactive({ layout: computed(() => route.meta.layout ? `l-${route.meta.layout}` : `l-default`) })
-
-    onMounted(() => {
-      console.log('mounted app')
-    })
-
-    onUpdated(() => {
-      console.log('update app')
-    })
-    onUnmounted(() => {
-      console.log('unmounted app')
-    })
-
-    watch(route, (route, prevRoute) => {
-      console.log('new route: ', route)
-      console.log('prev route: ', prevRoute)
-    })
+    const layout = computed(() => route.meta.layout ? `l-${route.meta.layout}` : `l-default`)
 
     return {
       route,
-      state
+      layout
     }
   }
 }
 </script>
-
