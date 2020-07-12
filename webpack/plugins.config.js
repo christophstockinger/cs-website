@@ -52,7 +52,25 @@ const plugins = (env = {}) => {
         : false,
       inject: env.production ? false : true,
       hash: env.production ? false : true,
-      title: '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | cloud.christophstockinger.de'
+      title: '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
+      base: '/',
+      meta: {
+        'Content-Security-Policy': { 'http-equiv': 'cache-control', 'default': 'max-age=0' },
+        'Content-Security-Policy': { 'http-equiv': 'cache-control', 'default': 'no-cache' },
+        'viewport': 'width=device-width, initial-scale=1.0',
+        'description': 'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
+        'robots': 'index,follow',
+        'author': 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
+        'publisher': 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
+        'version': '7.0',
+        'copyright': 'Christoph Stockinger',
+        'og:title': '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
+        'og:description': 'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
+        'og:image': '/assets/images/christoph-stockinger.jpg',
+        'og:locale': 'de_DE',
+        'og:type': 'website',
+        'og:url': 'https://www.christophstockinger.de'
+      }
     })
   )
 
@@ -85,14 +103,27 @@ const plugins = (env = {}) => {
 
   plugins.push(new VueLoaderPlugin())
 
+  const copyPluginPatterns = []
+
+  copyPluginPatterns.push({
+    from: path.join(__dirname, '../src/shared/images/favicon'),
+    to: path.join(__dirname, '../dist/assets/images/favicon')
+  })
+
+  if (env.production) {
+    copyPluginPatterns.push({
+      from: path.join(__dirname, '../build/robots.txt'),
+      to: path.join(__dirname, '../dist/')
+    })
+    copyPluginPatterns.push({
+      from: path.join(__dirname, '../build/sitemap.xml'),
+      to: path.join(__dirname, '../dist/')
+    })
+  }
+
   plugins.push(
     new CopyPlugin({
-      patterns: [
-        {
-          from: path.join(__dirname, '../src/shared/images/favicon'),
-          to: path.join(__dirname, '../dist/assets/images/favicon')
-        }
-      ]
+      patterns: copyPluginPatterns
     })
   )
 
