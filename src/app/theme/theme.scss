@@ -1,5 +1,5 @@
-@import "mixins";
-@import "grid";
+@import 'mixins';
+@import 'grid';
 
 // CS Colors
 $cs-color-green: #00ae2f;
@@ -16,7 +16,7 @@ $cs-font-weight: 400;
 $cs-font-weight-bold: 700;
 
 // CS Grid
-$cs-max-content-width:1280px;
+$cs-max-content-width: 1280px;
 $cs-grid-gutters: 32px;
 $cs-grid-columns: 12;
 $cs-grid-wrapper-padding-default: (20px / 320px) / 2 * 100%;
@@ -78,7 +78,7 @@ $cs-font-size-paragraph-small-phone: 0.75rem;
 $cs-line-height-paragraph-small: 1.55;
 
 // CS Animation and Transition
-$cs-transition-timing-function: ease-in-out;
+$cs-transition-timing-function: cubic-bezier(0.17, 0.67, 0.35, 1);
 $cs-transition-duration: 200ms;
 
 // CS Spacing
