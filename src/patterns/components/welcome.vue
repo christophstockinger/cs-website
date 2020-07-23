@@ -1,11 +1,31 @@
 <template>
-  <h2 class="c-Welcome">
+  <h2 ref="root" class="c-Welcome">
     Hi, nice to see you here!
   </h2>
 </template>
 
 <script>
-export default {}
+import { onMounted, ref } from 'vue'
+export default {
+  setup() {
+    const root = ref(null)
+
+    onMounted(() => {
+      console.log(root.value)
+      if (root.value) {
+        load()
+      }
+    })
+
+    const load = () => {
+      root.value.classList.add('is-loading')
+    }
+
+    return {
+      root
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -36,6 +56,38 @@ export default {}
       width: 160px;
       height: 16px;
     }
+  }
+
+  &.is-loading {
+    &::before {
+      animation-name: line-width-mobile;
+      animation-duration: $cs-transition-duration * 10;
+      animation-timing-function: $cs-transition-timing-function;
+      animation-delay: $cs-transition-duration * 2;
+      animation-iteration-count: normal;
+
+      @include cs-respond-to(m) {
+        animation-name: line-width-desktop;
+      }
+    }
+  }
+}
+
+@keyframes line-width-mobile {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80px;
+  }
+}
+
+@keyframes line-width-desktop {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 160px;
   }
 }
 </style>
