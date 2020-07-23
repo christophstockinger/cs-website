@@ -143,7 +143,7 @@ export default {
 
   &-avatar {
     @include cs-respond-to(s) {
-      cursor: progress;
+      cursor: default;
       box-shadow: 0 0 24px var(--shadow-color);
       transition-timing-function: $cs-transition-timing-function;
       transition-duration: $cs-transition-duration;
