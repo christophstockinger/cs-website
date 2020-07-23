@@ -1,6 +1,6 @@
 <template>
   <div class="c-Logo">
-    <router-link class="c-Logo-link" to="/">
+    <router-link class="c-Logo-link" to="/" aria-label="Christoph Stockinger">
       <svg
         class="c-Logo-svg"
         xmlns="http://www.w3.org/2000/svg"
