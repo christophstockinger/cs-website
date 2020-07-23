@@ -1,5 +1,5 @@
 <template>
-  <aside ref="rootElement" class="c-LegalNotice" :class="[visible]">
+  <aside ref="root" class="c-LegalNotice" :class="[visible]">
     <button class="c-LegalNotice-closeButton" @click="close()">
       <svg
         class="c-LegalNotice-svg"
@@ -175,7 +175,7 @@ export default {
     'c-paragraph': cParagraph
   },
   setup() {
-    const rootElement = ref(null)
+    const root = ref(null)
 
     const state = reactive({ open: false })
 
@@ -190,7 +190,7 @@ export default {
 
       if (document.body) {
         document.body.classList.add('has-open-legal')
-        disableBodyScroll(rootElement.value)
+        disableBodyScroll(root.value)
       }
     }
 
@@ -199,12 +199,12 @@ export default {
 
       if (document.body) {
         document.body.classList.remove('has-open-legal')
-        enableBodyScroll(rootElement.value)
+        enableBodyScroll(root.value)
       }
     }
 
     return {
-      rootElement,
+      root,
       state,
       visible,
       open,
@@ -248,12 +248,20 @@ export default {
     background-color: transparent;
     border: 0 none;
     border-radius: 0;
+    transition-timing-function: $cs-transition-timing-function;
+    transition-duration: $cs-transition-duration;
+    transition-property: transform;
+    transform: rotate(0deg);
 
     @include cs-respond-to(m) {
       top: $cs-spacing-xxl;
       right: $cs-spacing-xxl;
       width: 48px;
       height: 48px;
+    }
+
+    @include cs-hover {
+      transform: rotate(-5deg);
     }
   }
 
