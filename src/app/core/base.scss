@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+:root,
+.cs-light-mode {
+  --primary-background-color: #{$cs-color-white};
+  --secondary-background-color: #{rgba($cs-color-green, 0.8)};
+  --primary-headline-color: #{$cs-color-green};
+  --secondary-headline-color: #{$cs-color-black};
+  --primary-paragraph-color: #{$cs-color-black};
+  --secondary-paragraph-color: #{$cs-color-white};
+  --primary-link-color: #{$cs-color-green};
+  --primary-link-hover-color: #{$cs-color-darkGreen};
+  --primary-link-active-color: #{$cs-color-grey3};
+  --secondary-link-color: #{$cs-color-white};
+  --secondary-link-hover-color: #{$cs-color-white};
+  --secondary-link-active-color: #{$cs-color-grey1};
+  --icon-color: #{$cs-color-black};
+  --icon-hover-color: #{$cs-color-green};
+  --icon-active-color: #{$cs-color-darkGreen};
+  --quote-color: #{$cs-color-grey1};
+  --logo-light-color: #{$cs-color-green};
+  --logo-dark-color: #{$cs-color-black};
+  --mode-switcher-color: #{$cs-color-black};
+  --mode-switcher-hover-color: #{$cs-color-green};
+  --mode-switcher-active-color: #{$cs-color-darkGreen};
+  --selection-background-color: #{$cs-color-green};
+  --selection-text-color: #{$cs-color-white};
+  --shadow-color: #{rgba($cs-color-black, 0.2)};
+}
+
+.cs-dark-mode,
+.cs-dark-mode:root {
+  --primary-background-color: #{$cs-color-black};
+  --secondary-background-color: #{rgba($cs-color-grey3, 0.8)};
+  --primary-headline-color: #{$cs-color-white};
+  --secondary-headline-color: #{$cs-color-grey2};
+  --primary-paragraph-color: #{$cs-color-grey2};
+  --secondary-paragraph-color: #{$cs-color-white};
+  --primary-link-color: #{$cs-color-white};
+  --primary-link-hover-color: #{$cs-color-grey2};
+  --primary-link-active-color: #{$cs-color-green};
+  --secondary-link-color: #{$cs-color-white};
+  --secondary-link-hover-color: #{$cs-color-grey1};
+  --secondary-link-active-color: #{$cs-color-darkGreen};
+  --icon-color: #{$cs-color-grey2};
+  --icon-hover-color: #{$cs-color-white};
+  --icon-active-color: #{$cs-color-green};
+  --quote-color: #{$cs-color-grey3};
+  --logo-light-color: #{$cs-color-white};
+  --logo-dark-color: #{$cs-color-grey3};
+  --mode-switcher-color: #{$cs-color-grey2};
+  --mode-switcher-hover-color: #{$cs-color-grey1};
+  --mode-switcher-active-color: #{$cs-color-darkGreen};
+  --selection-background-color: #{$cs-color-grey1};
+  --selection-text-color: #{$cs-color-grey3};
+  --shadow-color: #{rgba($cs-color-grey1, 0.2)};
+}
+
+html {
+  font-family: #{$cs-font}, sans-serif;
+  font-size: $cs-baseUnit;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'liga', 'kern';
+}
+
+body {
+  font-family: #{$cs-font}, sans-serif;
+  background-color: var(--primary-background-color);
+  transition-timing-function: $cs-transition-timing-function;
+  transition-duration: $cs-transition-duration;
+  transition-property: background-color;
+}
+
+::selection {
+  color: var(--selection-text-color);
+  background: var(--selection-background-color);
+}
+
+/**
+ * [1] Prevent zooming in IE
+ * [2] Remove focus outline
+ * [3] Remove the tap highlight color on touch devices
+ */
+a,
+button,
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: none !important; // [1]
+  outline: none; // [2]
+
+  @include cs-remove-tap-highlight; // [3]
+}

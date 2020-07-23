@@ -1,28 +1,14 @@
-const path = require('path')
 module.exports = (env = {}) => {
-  // Aliase
-  const aliase = require('./webpack/aliase.config')(env)
-
-  // Standard Config
   const config = require('./webpack/config')(env)
-
-  // Entrypoints
+  const aliase = require('./webpack/aliase.config')
   const entrypoints = require('./webpack/entrypoints.config')(env)
-
-  // Exetensions
-  const extensions = require('./webpack/extension.config')(env)
-
-  // Plugins
+  const extensions = require('./webpack/extensions.config')
   const plugins = require('./webpack/plugins.config')(env)
-
-  // Rules
   const rules = require('./webpack/rules.config')(env)
-
-  // Mode
   const mode = env.production ? 'production' : 'development'
-
-  // Optimization
   const optimization = require('./webpack/optimization.config')(env)
+  const devServer = require('./webpack/devServer.config')
+
 
   return Object.assign({}, config, {
     entry: entrypoints,
@@ -35,6 +21,7 @@ module.exports = (env = {}) => {
     resolve: {
       extensions: extensions,
       alias: aliase
-    }
+    },
+    devServer: devServer
   })
 }

@@ -1,0 +1,87 @@
+// TODO: Complete error handling of krga-respond-to mixin
+
+/**
+ * Respond-to provides an easy breakpoint handling with semantic reading of
+ * media queries.
+ *
+ * Respond to breakpoint `s` (= 720px):
+ * @include krga-respond-to(s) {…}
+ * -> @media (min-width: 720px) {…}
+ *
+ * Respond to breakpoint `xs: 720px`:
+ * @include krga-respond-to(xs) {…}
+ * -> @media (min-width: 720px) {…}
+ *
+ * Respond up to breakpoint `xs: 720px`:
+ * @include krga-respond-to(xs max) {…}
+ * -> @media (max-width: 719px) {…}
+ *
+ * Respond between breakpoints `xs: 720px` and `m: 960px`
+ * @include krga-respond-to(xs m) {…}
+ * -> @media (min-width: 720px) and (max-width: 959px) {…}
+ */
+
+@mixin cs-respond-to($-breakpoint, $-breakpoints: $cs-breakpoints) {
+  $-query: false;
+
+  @if type-of($-breakpoint) == string {
+    // One single breakpoint
+    @if map-has-key($-breakpoints, $-breakpoint) {
+      $-query: "(min-width: #{map-get($-breakpoints, $-breakpoint)})";
+    }
+
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$-breakpoint}`. " + "Available breakpoints are: #{map-keys($-breakpoints)}.";
+    }
+  }
+
+  @else if type-of($-breakpoint) == list {
+    $-isMaxWidth: false;
+    $-min: false;
+    $-max: false;
+
+    @each $-item in $-breakpoint {
+      @if $-item == max {
+        $-isMaxWidth: true;
+      }
+
+      @else {
+        @if map-has-key($-breakpoints, $-item) {
+          @if $-min == false {
+            $-min: map-get($-breakpoints, $-item);
+          }
+
+          @else {
+            $-max: map-get($-breakpoints, $-item) - 1px;
+          }
+        }
+
+        @else {
+          @warn "Unfortunately, no value could be retrieved from `#{$-item}`. " + "Available breakpoints are: #{map-keys($-breakpoints)}.";
+        }
+      }
+    }
+
+    @if $-min and $-max {
+      $-query: "(min-width: #{$-min}) and (max-width: #{$-max})";
+    }
+
+    @else if $-min {
+      @if $-isMaxWidth {
+        $-query: "(max-width: #{$-min - 1px})";
+      }
+    }
+
+    @else {
+      @warn "Unfortunately, no value found";
+    }
+  }
+
+  @if $-query {
+    $-query: "screen and #{$-query}";
+
+    @media #{$-query} {
+      @content;
+    }
+  }
+}

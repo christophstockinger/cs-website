@@ -1,0 +1,343 @@
+<template>
+  <aside ref="root" class="c-LegalNotice" :class="[visible]">
+    <button class="c-LegalNotice-closeButton" @click="close()">
+      <svg
+        class="c-LegalNotice-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        >
+          <path d="M.75 23.249l22.5-22.5M23.25 23.249L.75.749" />
+        </g>
+      </svg>
+    </button>
+    <div class="c-LegalNotice-scrollContainer">
+      <div class="c-LegalNotice-wrapper">
+        <div class="c-LegalNotice-container">
+          <!-- Imprint -->
+          <div class="c-LegalNotice-imprint">
+            <c-headline tag="h2" h2 class="c-LegalNotice-headline"
+              >Imprint</c-headline
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>According to §5 TMG</strong><br />Christoph Stockinger<br />Pandurenweg
+              25<br />94469 Deggendorf</c-paragraph
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Responsible for the content</strong><br />Christoph
+              Stockinger<br />E-Mail:
+              <a href="mailto:hello@christophstockinger.de"
+                >hello@christophstockinger.de</a
+              ><br />Telefon: +49 (0) 160 1899824</c-paragraph
+            >
+          </div>
+          <!-- Disclaimer -->
+          <div class="c-LegalNotice-disclaimer">
+            <c-headline tag="h2" h2 class="c-LegalNotice-headline"
+              >Disclaimer</c-headline
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Accountability for content</strong><br />
+              The contents of our pages have been created with the utmost care.
+              However, we cannot guarantee the contents' accuracy, completeness
+              or topicality. According to statutory provisions, we are
+              furthermore responsible for our own content on these web pages. In
+              this matter, please note that we are not obliged to monitor the
+              transmitted or saved information of third parties, or investigate
+              circumstances pointing to illegal activity. Our obligations to
+              remove or block the use of information under generally applicable
+              laws remain unaffected by this as per §§ 8 to 10 of the Telemedia
+              Act (TMG).</c-paragraph
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Accountability for links</strong><br />
+              Responsibility for the content of external links (to web pages of
+              third parties) lies solely with the operators of the linked pages.
+              No violations were evident to us at the time of linking. Should
+              any legal infringement become known to us, we will remove the
+              respective link immediately.</c-paragraph
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Copyright</strong><br />
+              Our web pages and their contents are subject to German copyright
+              law. Unless expressly permitted by law, every form of utilizing,
+              reproducing or processing works subject to copyright protection on
+              our web pages requires the prior consent of the respective owner
+              of the rights. Individual reproductions of a work are only allowed
+              for private use. The materials from these pages are copyrighted
+              and any unauthorized use may violate copyright laws.</c-paragraph
+            >
+          </div>
+          <!-- Data protection -->
+          <div class="c-LegalNotice-dataProtection">
+            <c-headline tag="h2" h2 class="c-LegalNotice-headline"
+              >Data protection</c-headline
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              >I use more CSS than cookies! I only store cookies from Google
+              Analytics, which are used for static analysis of the number of
+              visitors to my website. Otherwise, technically necessary cookies
+              are stored, which do not allow any tracking. I also use the
+              services of Google Firebase for hosting.</c-paragraph
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Google Analytics</strong><br />
+              This website uses functions of the web analysis service Google
+              Analytics. The provider is Google Inc, 1600 Amphitheatre Parkway,
+              Mountain View, CA 94043, USA.<br />
+              Google Analytics uses so-called "cookies". These are text files
+              which are stored on your computer and which enable an analysis of
+              your use of the website. The information generated by the cookie
+              about your use of this website is usually transferred to a Google
+              server in the USA and stored there.<br />
+              The storage of Google Analytics cookies is based on Art. 6 para. 1
+              lit. f DSGVO. The website operator has a legitimate interest in
+              the analysis of user behaviour in order to optimise both his
+              website and his advertising.</c-paragraph
+            >
+            <c-paragraph class="c-LegalNotice-paragraph"
+              ><strong>Google Firebase</strong><br />
+              Our apps use technology from Google Firebase (Google Inc., 1600
+              Amphitheatre Parkway, Mountain View, CA 94043, USA, "Google").
+              Firebase is part of the Google Cloud Platform and offers a variety
+              of services for developers. You can find a list of them here:
+              <a href="https://firebase.google.com/terms/"
+                >https://firebase.google.com/terms/</a
+              >. Some Firebase services process personal data. In most cases,
+              the personal data is limited to so-called "instance IDs", which
+              are time-stamped. These "Instance IDs" assigned by Firebase are
+              unique and thus allow the linking of different events or
+              processes. This data does not constitute personally identifiable
+              information for us, nor do we make any efforts to subsequently
+              personalize it. We process this aggregated data to analyze and
+              optimize usage behavior, such as by evaluating crash reports.<br />For
+              Firebase Analytics, Google uses not only the "Instance ID"
+              described above, but also the advertising ID of the end device. In
+              the device settings of your mobile device you can restrict the use
+              of the Advertising ID.<br />
+              For Android: Settings > Google > Ads > Reset Ad ID<br />
+              For iOS: Settings > Privacy > Advertising > No Ad Tracking<br />Firebase
+              Cloud Messaging is used to transmit push messages or so-called
+              in-app messages (messages that are only displayed within the
+              respective app). The end device is assigned a pseudonymized push
+              reference, which serves as the target for the push messages or
+              in-app messages. The push messages can be deactivated and
+              reactivated at any time in the settings of the mobile device. We
+              do not use Firebase services that use personally identifiable
+              information such as IP addresses, email addresses, phone numbers,
+              or passwords. For more information about Firebase's privacy and
+              security, please visit
+              <a href="https://firebase.google.com/support/privacy/"
+                >https://firebase.google.com/support/privacy/</a
+              >. We use servers located within the EU whenever possible.
+              However, it cannot be ruled out that data may also be transferred
+              to the USA. Google has joined the EU-US Privacy-Shield, a data
+              protection agreement between the EU and the USA. More information
+              about Google Firebase and data protection can be found at
+              <a href="https://www.google.com/policies/privacy/"
+                >https://www.google.com/policies/privacy/</a
+              >
+              and
+              <a href="https://firebase.google.com/"
+                >https://firebase.google.com/</a
+              >.<br />We have also entered into several contracts with Google
+              for the processing of commissioned data. In these contracts,
+              Google undertakes to protect the data of our users, to process it
+              on our behalf in accordance with their data protection regulations
+              and, in particular, not to pass it on to third parties. You can
+              object to the setting or processing of cookies and the associated
+              profiling via our website, as described in detail in point 5 of
+              the privacy policy.</c-paragraph
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</template>
+
+<script>
+import { ref, reactive, computed, onMounted } from 'vue'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
+import cHeadline from '@cs/components/headline.vue'
+import cParagraph from '@cs/components/paragraph.vue'
+
+export default {
+  components: {
+    'c-headline': cHeadline,
+    'c-paragraph': cParagraph
+  },
+  setup() {
+    const root = ref(null)
+
+    const state = reactive({ open: false })
+
+    const visible = computed(() => {
+      return {
+        ['is-visible']: state.open
+      }
+    })
+
+    const open = () => {
+      state.open = true
+
+      if (document.body) {
+        document.body.classList.add('has-open-legal')
+        disableBodyScroll(root.value)
+      }
+    }
+
+    const close = () => {
+      state.open = false
+
+      if (document.body) {
+        document.body.classList.remove('has-open-legal')
+        enableBodyScroll(root.value)
+      }
+    }
+
+    return {
+      root,
+      state,
+      visible,
+      open,
+      close
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.c-LegalNotice {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 8000;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  visibility: hidden;
+  background-color: var(--secondary-background-color);
+  opacity: 0;
+  transition-timing-function: $cs-transition-timing-function;
+  transition-duration: $cs-transition-duration * 2;
+  transition-property: opacity, visibility, transform;
+  transform: scale(0) rotate(-77deg);
+
+  &-closeButton {
+    position: fixed;
+    top: $cs-spacing-m;
+    right: $cs-spacing-m;
+    z-index: 8500;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-link-color);
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 0;
+    transition-timing-function: $cs-transition-timing-function;
+    transition-duration: $cs-transition-duration;
+    transition-property: transform;
+    transform: rotate(0deg);
+
+    @include cs-respond-to(m) {
+      top: $cs-spacing-xxl;
+      right: $cs-spacing-xxl;
+      width: 48px;
+      height: 48px;
+    }
+
+    @include cs-hover {
+      transform: rotate(-5deg);
+    }
+  }
+
+  &-svg {
+    color: inherit;
+    fill: currentColor;
+  }
+
+  &-scrollContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: $cs-spacing-xxl;
+    padding-bottom: $cs-spacing-xxl;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    @include cs-grid-wrapper;
+  }
+
+  &-container {
+    @include cs-grid-container;
+  }
+
+  &-imprint,
+  &-disclaimer,
+  &-dataProtection {
+    @include cs-grid-cell(12);
+
+    @include cs-respond-to(m) {
+      @include cs-grid-cell(10);
+      @include cs-grid-pre(1);
+      @include cs-grid-post(1);
+    }
+
+    margin-bottom: $cs-spacing-xxl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-headline {
+    margin-bottom: $cs-spacing-l;
+    color: var(--secondary-paragraph-color);
+  }
+
+  &-paragraph {
+    margin-bottom: $cs-spacing-m;
+    hyphens: auto;
+    color: var(--secondary-paragraph-color);
+
+    a {
+      font-weight: $cs-font-weight;
+      color: var(---secondary-link-color);
+
+      @include cs-hover {
+        color: var(---secondary-link-hover-color);
+      }
+
+      @include cs-active {
+        color: var(---secondary-link-active-color);
+      }
+    }
+  }
+
+  &.is-visible {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+</style>
