@@ -1,4 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const minimizer = (env = {}) => {
@@ -6,20 +6,27 @@ const minimizer = (env = {}) => {
 
   if (env.production) {
     minimizer.push(
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
         sourceMap: true,
-        uglifyOptions: {
+        terserOptions: {
           compress: {
             drop_console: true
+          },
+          output: {
+            comments: false
           }
-        }
+        },
+        extractComments: true
       })
     )
+  }
 
+  if (env.production) {
     minimizer.push(new OptimizeCSSAssetsPlugin({}))
   }
+
   return minimizer
 }
 

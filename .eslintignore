@@ -1,0 +1,13 @@
+webpack/**
+scripts/**
+build/**
+.vscode/**
+dist/**
+.gitignore
+.babelrc
+.env
+.eslintrc.json
+.stylelintrc.json
+.prettierrc
+.editorconfig
+webpack.config.js

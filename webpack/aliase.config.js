@@ -1,14 +1,11 @@
 const path = require('path')
 
-const aliase = (env = {}) => {
-  const aliase = {
-    '@src': path.join(__dirname, '../src/'),
-    '@com': path.join(__dirname, '../src/components/'),
-    '@mod': path.join(__dirname, '../src/modules/'),
-    '@util': path.join(__dirname, '../src/utilities/')
-  }
-
-  return aliase
+const aliase = {
+  'vue': '@vue/runtime-dom',
+  '@src': path.join(__dirname, './../src'),
+  '@app': path.join(__dirname, './../src/app'),
+  '@cs': path.join(__dirname, './../src/patterns'),
+  '@shared': path.join(__dirname, './../src/shared')
 }
 
-module.exports = (env = {}) => aliase(env)
+module.exports = aliase

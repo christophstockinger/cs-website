@@ -1,0 +1,37 @@
+/* stylelint-disable */
+@mixin cs-headline($style: 'h1') {
+  @if ($style == 'h1') {
+    @include cs-typography-h1;
+
+    font-family: $cs-font;
+
+  } @else if ($style == 'h2') {
+    @include cs-typography-h2;
+
+    font-family: $cs-font;
+
+  } @else if ($style == 'h3') {
+    @include cs-typography-h3;
+
+    font-family: $cs-font;
+
+  } @else if ($style == 'h4') {
+    @include cs-typography-h4;
+
+    font-family: $cs-font;
+  } @else if ($style == 'h5') {
+    @include cs-typography-h5;
+
+    font-family: $cs-font;
+  } @else if ($style == 'h6') {
+    @include cs-typography-h6;
+
+    font-family: $cs-font;
+  } @else {
+    @error "Headline mixin error:`#{$style}` is not a valid headline style. Please use h1, h2, h3, h4, h5 oder h6.";
+  }
+
+  font-weight: 800;
+  font-stretch: normal;
+}
+/* stylelint-enable */

@@ -1,0 +1,144 @@
+@mixin cs-typography-h1 {
+  & {
+    font-size: $cs-font-size-h1-phone;
+    line-height: $cs-line-height-h1;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h1-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h1;
+    }
+  }
+}
+
+@mixin cs-typography-h2 {
+  & {
+    font-size: $cs-font-size-h2-phone;
+    line-height: $cs-line-height-h2;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h2-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h2;
+    }
+  }
+}
+
+@mixin cs-typography-h3 {
+  & {
+    font-size: $cs-font-size-h3-phone;
+    line-height: $cs-line-height-h3;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h3-tablet;
+    }
+
+    @include cs-respond-to(m) {
+      font-size: $cs-font-size-h3-desktop;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h3-large;
+    }
+  }
+}
+
+@mixin cs-typography-h4 {
+  & {
+    font-size: $cs-font-size-h4-phone;
+    line-height: $cs-line-height-h4;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h4-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h4;
+    }
+  }
+}
+
+@mixin cs-typography-h5 {
+  & {
+    font-size: $cs-font-size-h5-phone;
+    line-height: $cs-line-height-h5;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h5-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h5;
+    }
+  }
+}
+
+@mixin cs-typography-h6 {
+  & {
+    font-size: $cs-font-size-h6-phone;
+    line-height: $cs-line-height-h6;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-h6-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-h6;
+    }
+  }
+}
+
+@mixin cs-typography-paragraph {
+  & {
+    font-family: $cs-font;
+    font-size: $cs-font-size-paragraph-phone;
+    font-weight: $cs-font-weight;
+    line-height: 1.5;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-paragraph-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-paragraph;
+    }
+  }
+}
+
+@mixin cs-typography-paragraph-bold {
+  & {
+    font-family: $cs-font;
+    font-size: $cs-font-size-paragraph-phone;
+    font-weight: $cs-font-weight-bold;
+    line-height: 1.5;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-paragraph-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-paragraph;
+    }
+  }
+}
+
+@mixin cs-typography-paragraph-small {
+  & {
+    font-family: $cs-font;
+    font-size: $cs-font-size-paragraph-small-phone;
+    font-weight: $cs-font-weight;
+    line-height: 1.5;
+
+    @include cs-respond-to(s) {
+      font-size: $cs-font-size-paragraph-small-tablet;
+    }
+
+    @include cs-respond-to(l) {
+      font-size: $cs-font-size-paragraph-small;
+    }
+  }
+}
