@@ -2,9 +2,13 @@ name: Production Build
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: 
+    - master
+  # pull_request:
+  #   branches: [ master ]
+
+    tags:
+      - v*
 
 jobs:
   build:
