@@ -101,60 +101,6 @@
               the analysis of user behaviour in order to optimise both his
               website and his advertising.</c-paragraph
             >
-            <c-paragraph class="c-LegalNotice-paragraph"
-              ><strong>Google Firebase</strong><br />
-              Our apps use technology from Google Firebase (Google Inc., 1600
-              Amphitheatre Parkway, Mountain View, CA 94043, USA, "Google").
-              Firebase is part of the Google Cloud Platform and offers a variety
-              of services for developers. You can find a list of them here:
-              <a href="https://firebase.google.com/terms/"
-                >https://firebase.google.com/terms/</a
-              >. Some Firebase services process personal data. In most cases,
-              the personal data is limited to so-called "instance IDs", which
-              are time-stamped. These "Instance IDs" assigned by Firebase are
-              unique and thus allow the linking of different events or
-              processes. This data does not constitute personally identifiable
-              information for us, nor do we make any efforts to subsequently
-              personalize it. We process this aggregated data to analyze and
-              optimize usage behavior, such as by evaluating crash reports.<br />For
-              Firebase Analytics, Google uses not only the "Instance ID"
-              described above, but also the advertising ID of the end device. In
-              the device settings of your mobile device you can restrict the use
-              of the Advertising ID.<br />
-              For Android: Settings > Google > Ads > Reset Ad ID<br />
-              For iOS: Settings > Privacy > Advertising > No Ad Tracking<br />Firebase
-              Cloud Messaging is used to transmit push messages or so-called
-              in-app messages (messages that are only displayed within the
-              respective app). The end device is assigned a pseudonymized push
-              reference, which serves as the target for the push messages or
-              in-app messages. The push messages can be deactivated and
-              reactivated at any time in the settings of the mobile device. We
-              do not use Firebase services that use personally identifiable
-              information such as IP addresses, email addresses, phone numbers,
-              or passwords. For more information about Firebase's privacy and
-              security, please visit
-              <a href="https://firebase.google.com/support/privacy/"
-                >https://firebase.google.com/support/privacy/</a
-              >. We use servers located within the EU whenever possible.
-              However, it cannot be ruled out that data may also be transferred
-              to the USA. Google has joined the EU-US Privacy-Shield, a data
-              protection agreement between the EU and the USA. More information
-              about Google Firebase and data protection can be found at
-              <a href="https://www.google.com/policies/privacy/"
-                >https://www.google.com/policies/privacy/</a
-              >
-              and
-              <a href="https://firebase.google.com/"
-                >https://firebase.google.com/</a
-              >.<br />We have also entered into several contracts with Google
-              for the processing of commissioned data. In these contracts,
-              Google undertakes to protect the data of our users, to process it
-              on our behalf in accordance with their data protection regulations
-              and, in particular, not to pass it on to third parties. You can
-              object to the setting or processing of cookies and the associated
-              profiling via our website, as described in detail in point 5 of
-              the privacy policy.</c-paragraph
-            >
           </div>
         </div>
       </div>
