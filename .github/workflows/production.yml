@@ -2,8 +2,8 @@ name: Production Build
 
 on:
   push:
-    branches: 
-    - main
+    # branches: 
+    # - main
   # pull_request:
   #   branches: [ master ]
 
