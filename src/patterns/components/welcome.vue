@@ -37,6 +37,7 @@ export default {
   height: auto;
   padding-top: $cs-spacing-s;
   color: var(--primary-headline-color);
+  text-transform: uppercase;
   transition-timing-function: $cs-transition-timing-function;
   transition-duration: $cs-transition-duration;
   transition-property: color;
