@@ -10,45 +10,62 @@
         </div>
         <div class="m-About-content">
           <c-paragraph class="m-About-paragraph"
-            >Currently I'm working as a software developer with focus on
-            frontend at the startup
+            >I am currently drinking my coffee ☕️ at my desk at
+            <a
+              href="https://www.c77.digital?ref=cs-web"
+              target="_blank"
+              rel="noreferrer"
+              >C77 Digital GmbH</a
+            >. As a full stack developer and managing director there I am always
+            looking for new projects and professional challenges 🚀. Whether
+            freelancer or full time job
+            drop me a line 📢!</c-paragraph
+          >
+          <c-paragraph class="m-About-paragraph"
+            >Before that I was a frontend magician 🪄 aka software developer at
             <a
               href="https://www.easy2parts.com"
               target="_blank"
               rel="noreferrer"
               >Easy2Parts</a
             >
-            on the MacBook keyboard. Besides that I make our world unique and
-            digital with my label
-            <a href="https://www.coding77.de" target="_blank" rel="noreferrer"
-              >Coding77 by Christoph Stockinger</a
-            >.</c-paragraph
+            and keyboard artist ⌨️ aka web developer at
+            <a href="https://www.sp.design" target="_blank" rel="noreferrer"
+              >Strichpunkt Design</a
+            >
+            and spent my days there with coffee ☕️, coke 🥤, VSCode 💻 and
+            Chrome 🖥!</c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
-            >True to the quote "Stay hungry. Stay foolish" by Steve Jobs, as a
-            web developer I am always open for new things and also crazy enough
-            to realize the impossible. I have already convinced my customers -
+            >True to the quote "Stay hungry. Stay foolish" by Steve Jobs 🍏, as
+            a web developer I am always open for new things and also crazy
+            enough to realize the impossible. I have already convinced my
+            customers -
             <a
               href="https://www.dfb-akademie.de"
               target="_blank"
               rel="noreferrer"
-              >DFB</a
-            >, Daimler and
-            <a href="https://dpdhl-brands.com/" target="_blank" rel="noreferrer"
-              >DHL</a
+              >DFB ⚽️</a
             >
-            as well as regional companies. I don't use Rocket Science because
-            PHP and Node.js for backend applications and JS frameworks like
-            Vue.js or React for frontend applications are completely sufficient.
+            <a href="https://www.blackboat.com" target="_blank" rel="noreferrer"
+              >Blackboat 💡</a
+            >,
+            <a href="https://dpdhl-brands.com/" target="_blank" rel="noreferrer"
+              >DHL 📯</a
+            >
+            as well as regional companies and many more. I don't use Rocket
+            Science 🚀 because PHP and Node.js (Typescript) for backend
+            applications and JS frameworks like Vue.js or React for frontend
+            applications are completely sufficient 💪🏻.
           </c-paragraph>
           <c-paragraph class="m-About-paragraph"
             >My personal incentive to learn something new every day is to
-            develop myself further.</c-paragraph
+            develop myself further. <span style="transform: scaleX(-1); display: inline-block;">🚅</span></c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
             >For projects or freelancer inquiries write me at
             <a href="mailto:info@coding77.de">info@coding77.de</a>!<br />
-            Otherwise send me funny stories to
+            Otherwise send me funny stories 👀 or job offers to
             <a href="mailto:hello@christophstockinger.de"
               >hello@christophstockinger.de</a
             >!</c-paragraph

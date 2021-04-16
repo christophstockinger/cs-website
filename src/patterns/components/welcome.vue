@@ -1,6 +1,6 @@
 <template>
   <h2 ref="root" class="c-Welcome">
-    Hi, nice to see you here!
+    Hi, nice to see you here! ✌🏻
   </h2>
 </template>
 
