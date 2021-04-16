@@ -10,57 +10,55 @@
         </div>
         <div class="m-About-content">
           <c-paragraph class="m-About-paragraph"
-            >I am currently drinking my coffee ☕️ at my desk at
+            >I am currently drinking my coffee at my desk at
             <a
               href="https://www.c77.digital?ref=cs-web"
               target="_blank"
               rel="noreferrer"
               >C77 Digital GmbH</a
             >. As a full stack developer and managing director there I am always
-            looking for new projects and professional challenges 🚀. Whether
-            freelancer or full time job
-            drop me a line 📢!</c-paragraph
+            looking for new projects and professional challenges. Whether
+            freelancer or full time job drop me a line!</c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
-            >Before that I was a frontend magician 🪄 aka software developer at
+            >Before that I was a frontend magician aka software developer at
             <a
               href="https://www.easy2parts.com"
               target="_blank"
               rel="noreferrer"
               >Easy2Parts</a
             >
-            and keyboard artist ⌨️ aka web developer at
+            and keyboard artist aka web developer at
             <a href="https://www.sp.design" target="_blank" rel="noreferrer"
               >Strichpunkt Design</a
             >
-            and spent my days there with coffee ☕️, coke 🥤, VSCode 💻 and
-            Chrome 🖥!</c-paragraph
+            and spent my days there with coffee, coke, VSCode and
+            Chrome!</c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
-            >True to the quote "Stay hungry. Stay foolish" by Steve Jobs 🍏, as
-            a web developer I am always open for new things and also crazy
-            enough to realize the impossible. I have already convinced my
-            customers -
+            >True to the quote "Stay hungry. Stay foolish" by Steve Jobs, as a
+            web developer I am always open for new things and also crazy enough
+            to realize the impossible. I have already convinced my customers -
             <a
               href="https://www.dfb-akademie.de"
               target="_blank"
               rel="noreferrer"
-              >DFB ⚽️</a
-            >
+              >DFB</a
+            >, 
             <a href="https://www.blackboat.com" target="_blank" rel="noreferrer"
-              >Blackboat 💡</a
+              >Blackboat</a
             >,
             <a href="https://dpdhl-brands.com/" target="_blank" rel="noreferrer"
-              >DHL 📯</a
+              >DHL</a
             >
             as well as regional companies and many more. I don't use Rocket
-            Science 🚀 because PHP and Node.js (Typescript) for backend
+            Science because PHP and Node.js (Typescript) for backend
             applications and JS frameworks like Vue.js or React for frontend
-            applications are completely sufficient 💪🏻.
+            applications are completely sufficient.
           </c-paragraph>
           <c-paragraph class="m-About-paragraph"
             >My personal incentive to learn something new every day is to
-            develop myself further. <span style="transform: scaleX(-1); display: inline-block;">🚅</span></c-paragraph
+            develop myself further.</c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
             >For projects or freelancer inquiries write me at
