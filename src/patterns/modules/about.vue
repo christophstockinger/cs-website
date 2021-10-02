@@ -21,14 +21,14 @@
             freelancer or full time job drop me a line!</c-paragraph
           >
           <c-paragraph class="m-About-paragraph"
-            >Before that I was a frontend magician aka software developer at
+            >Before that I was a frontend magician alias software developer at
             <a
               href="https://www.easy2parts.com"
               target="_blank"
               rel="noreferrer"
               >Easy2Parts</a
             >
-            and keyboard artist aka web developer at
+            and keyboard artist alias web developer at
             <a href="https://www.sp.design" target="_blank" rel="noreferrer"
               >Strichpunkt Design</a
             >
@@ -62,7 +62,7 @@
           >
           <c-paragraph class="m-About-paragraph"
             >For projects or freelancer inquiries write me at
-            <a href="mailto:info@coding77.de">info@coding77.de</a>!<br />
+            <a href="mailto:info@c77.digital">info@c77.digital</a>!<br />
             Otherwise send me funny stories 👀 or job offers to
             <a href="mailto:hello@christophstockinger.de"
               >hello@christophstockinger.de</a
