@@ -76,7 +76,7 @@
     "sass-resources-loader": "^2.0.3",
     "standard": "^14.3.4",
     "style-loader": "^1.2.1",
-    "stylelint": "^13.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
