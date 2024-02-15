@@ -4,7 +4,6 @@ const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 const plugins = (env = {}) => {
@@ -52,20 +51,30 @@ const plugins = (env = {}) => {
         : false,
       inject: env.production ? false : true,
       hash: env.production ? false : true,
-      title: '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
+      title:
+        '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
       base: '/',
       meta: {
-        'Content-Security-Policy': { 'http-equiv': 'cache-control', 'default': 'max-age=0' },
-        'Content-Security-Policy': { 'http-equiv': 'cache-control', 'default': 'no-cache' },
-        'viewport': 'width=device-width, initial-scale=1.0',
-        'description': 'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
-        'robots': 'index,follow',
-        'author': 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
-        'publisher': 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
-        'version': '7.0',
-        'copyright': 'Christoph Stockinger',
-        'og:title': '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
-        'og:description': 'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
+        'Content-Security-Policy': {
+          'http-equiv': 'cache-control',
+          default: 'max-age=0'
+        },
+        'Content-Security-Policy': {
+          'http-equiv': 'cache-control',
+          default: 'no-cache'
+        },
+        viewport: 'width=device-width, initial-scale=1.0',
+        description:
+          'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
+        robots: 'index,follow',
+        author: 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
+        publisher: 'Christoph Stockinger, Pandurenweg 25, 94469 Deggendorf',
+        version: '7.0',
+        copyright: 'Christoph Stockinger',
+        'og:title':
+          '🚀 Welcome @ Christoph Stockinger ✌🏻 | Christoph Stockinger | www.christophstockinger.de',
+        'og:description':
+          'Christoph Stockinger is a full stack web developer with a focus on developing unique digital products. He is the founder of his label Coding77 by Christoph Stockinger. With his label he is open for web projects or freelancer requests.',
         'og:image': '/assets/images/christoph-stockinger.jpg',
         'og:locale': 'de_DE',
         'og:type': 'website',
@@ -82,21 +91,6 @@ const plugins = (env = {}) => {
     plugins.push(
       new MiniCssExtractPlugin({
         filename: '[name].bundle.css'
-      })
-    )
-  }
-
-  if (env.production) {
-    plugins.push(
-      new OptimizeCssAssetsPlugin({
-        assetNameRegExp: /\.optimize\.css$/g,
-        cssProcessor: require('cssnano'),
-        cssProcessorOptions: {
-          discardComments: {
-            removeAll: true
-          }
-        },
-        canPrint: true
       })
     )
   }

@@ -28,8 +28,16 @@ const styleLoaders = (env = {}) => {
   styleLoaders.push({
     loader: 'postcss-loader',
     options: {
-      ident: 'postcss',
-      plugins: loader => [autoprefixer(), postcssFlexBugs]
+      postcssOptions: {
+        plugins: [
+          [
+            'postcss-preset-env',
+            {
+              // Options
+            }
+          ]
+        ]
+      }
     }
   })
 
@@ -43,9 +51,7 @@ const styleLoaders = (env = {}) => {
   styleLoaders.push({
     loader: 'sass-resources-loader',
     options: {
-      resources: [
-        path.join(__dirname, '../src/app/theme/theme.scss'),
-      ]
+      resources: [path.join(__dirname, '../src/app/theme/theme.scss')]
     }
   })
 

@@ -1,5 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 const minimizer = (env = {}) => {
   const minimizer = []
@@ -7,10 +7,9 @@ const minimizer = (env = {}) => {
   if (env.production) {
     minimizer.push(
       new TerserPlugin({
-        cache: true,
         parallel: true,
-        sourceMap: true,
         terserOptions: {
+          sourceMap: true,
           compress: {
             drop_console: true
           },
@@ -24,7 +23,7 @@ const minimizer = (env = {}) => {
   }
 
   if (env.production) {
-    minimizer.push(new OptimizeCSSAssetsPlugin({}))
+    minimizer.push(new CssMinimizerPlugin({}))
   }
 
   return minimizer
