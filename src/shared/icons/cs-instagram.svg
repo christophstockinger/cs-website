@@ -1,7 +1,0 @@
-<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <rect x=".667" y=".667" width="30.667" height="30.667" rx="6"/>
-    <circle cx="16" cy="16" r="8"/>
-    <circle cx="25.333" cy="6.667" r="2"/>
-  </g>
-</svg>

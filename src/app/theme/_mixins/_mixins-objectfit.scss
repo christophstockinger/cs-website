@@ -1,4 +1,0 @@
-@mixin cs-object-fit($_object-fit: cover) {
-  font-family: "object-fit: #{$_object-fit};";
-  object-fit: $_object-fit;
-}
