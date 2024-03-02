@@ -54,7 +54,7 @@ const RootLayout = ({ children }: IRootLayoutProps) => {
           <div className="w-full order-2 h-auto lg:w-2/3 lg:pr-24 lg:order-1">
             {children}
           </div>
-          <div className="w-full order-1 h-auto aspect-square lg:w-1/3 lg:order-2 lg:sticky lg:top-0 lg:max-h-screen">
+          <div className="w-full order-1 h-auto aspect-portrait overflow-hidden lg:w-1/3 lg:order-2 lg:sticky lg:top-0 lg:max-h-screen">
             <ProfilePortrait className="lg:absolute lg:inset-0" />
           </div>
         </main>
