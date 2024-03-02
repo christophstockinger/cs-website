@@ -58,7 +58,8 @@ const config: Config = {
       spacing: {
         84: '21rem',
         88: '22rem',
-        100: '25rem'
+        100: '25rem',
+        screen: '100svw',
       }
     }
   },
