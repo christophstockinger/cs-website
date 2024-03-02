@@ -78,7 +78,7 @@ const References = ({ className = undefined }: IReferencesProps) => {
       <div className="flex justify-end items-center w-full h-auto mt-12">
         <Link
           className="group inline-flex items-center gap-3 text-primary hover:text-primary"
-          href="https://www.morethingsdigital/projects?ref=christophstockinger.de"
+          href="https://www.morethings.digital/projects?ref=christophstockinger.de"
           target="_blank">
           <strong className="border-b-2 border-transparent group-hover:border-primary transition-all duration-300 ease-in-out">
             weitere Referenzen
