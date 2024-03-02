@@ -20,7 +20,7 @@ const Headline = ({
     as,
     {
       className: cn(
-        'trasition-colors duration-300 ease-in-out',
+        'hyphens-auto trasition-colors duration-300 ease-in-out',
         {
           'text-primary': color === 'primary',
           'text-black': color === 'black',

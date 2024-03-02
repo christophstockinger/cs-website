@@ -56,6 +56,7 @@ const config: Config = {
         portrait: '9 / 16'
       },
       spacing: {
+        68: '17rem',
         84: '21rem',
         88: '22rem',
         100: '25rem',

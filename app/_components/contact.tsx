@@ -24,7 +24,7 @@ const Contact = ({ className = undefined }: IContactProps) => {
           </strong>
         </Paragraph>
       </Text>
-      <dl className="relative w-full max-w-100 h-auto mt-16 flex flex-wrap items-center gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8">
+      <dl className="relative w-80 md:w-100 h-auto mt-16 flex flex-wrap items-center gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8">
         <dt className="w-8 h-8 md:w-10 md:h-10 flex-shrink">
           <span className="sr-only">Mail</span>
           <span className="w-full h-full">
@@ -47,7 +47,7 @@ const Contact = ({ className = undefined }: IContactProps) => {
             </svg>
           </span>
         </dt>
-        <dd className="w-88 md:w-84">
+        <dd className="w-68 md:w-84">
           <Link
             className="link text-base"
             href="mailto:christoph@morethings.digital?subject=Projektanfrage"
@@ -71,7 +71,7 @@ const Contact = ({ className = undefined }: IContactProps) => {
             </svg>
           </span>
         </dt>
-        <dd className="w-88 md:w-84">
+        <dd className="w-68 md:w-84">
           <Link
             className="link text-base"
             href="tel:+4915110977723"
