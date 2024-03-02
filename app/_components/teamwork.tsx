@@ -9,7 +9,7 @@ const Teamwork = ({ className = undefined }: ITeamworkProps) => {
   return (
     <>
       <Headline as="h2" variant="xl" color="primary">
-        Warum Sie mit mir zusammenarbeiten sollen?
+        Warum Sie mit mir zusammen&shy;arbeiten sollen?
       </Headline>
       <Text className="mt-8">
         <Paragraph>
