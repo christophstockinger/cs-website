@@ -15,7 +15,7 @@ const Card = ({
 }: ICardProps) => {
   return (
     <div className={cn('w-full h-auto flex flex-col gap-3', className)}>
-      <Headline as="h4" variant="lg" color="current">
+      <Headline as="h3" variant="lg" color="current">
         {title}
       </Headline>
       {description && <Description>{description}</Description>}

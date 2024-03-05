@@ -20,16 +20,22 @@ const Intro = ({ className = undefined }: IIntroProps) => {
             target="_blank">
             <strong>morethingsdigital GmbH</strong>
           </Link>
-          &nbsp; führe ich Projekte, die Agenturen und Unternehmen dabei helfen,
-          im Digitalen durchzustarten.
+          &nbsp; helfe ich Agenturen und Unternehmen dabei, in der digitalen
+          Welt durchzustarten.
         </Paragraph>
         <Paragraph>
-          Wir entwickeln maßgeschneiderte digitale Lösungen, die nicht nur die
-          Online-Präsenz unserer Kunden verbessern, sondern auch ihre
-          Arbeitsabläufe effizienter gestalten. Mit unserem tiefen Verständnis
-          für die digitale Welt und einem Blick für neue Trends setzen wir auf
-          neueste Technologien, um unseren Kunden zu helfen, sich in ihrem Markt
-          hervorzuheben und erfolgreich zu sein.
+          Ich entwickele maßgeschneiderte digitale Lösungen, die nicht nur die
+          Online-Präsenz meiner Kunden verbessert, sondern auch Ihre
+          Arbeitsabläufe effizienter gestalten kann. Mit meinem tiefen
+          Verständnis für die digitale Welt sowie neuen Trends setze ich auf
+          neueste Technologien.
+        </Paragraph>
+        <Paragraph>
+          <strong>
+            Ich bin Ihr Partner für&nbsp;
+            <span className="text-primary">All Things Digital</span>
+          </strong>
+          !
         </Paragraph>
       </Text>
     </>

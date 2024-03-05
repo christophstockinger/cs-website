@@ -16,7 +16,7 @@ const References = ({ className = undefined }: IReferencesProps) => {
     {
       title: 'DHL Brand Hub',
       description:
-        'Für STRICHPUNKT Design, langjährige Leadagentur der DHL Group, übernehmen ich und Team seit 2020 die technische Umsetzung und Betreuung des DHL Group Global Brand Hubs.',
+        'Für STRICHPUNKT Design, langjährige Leadagentur der DHL Group, übernehmen ich und mein Team seit 2020 die technische Umsetzung und Betreuung des DHL Group Global Brand Hubs.',
       href: 'https://www.dpdhl-brands.com?ref=christophstockinger.de'
     },
     {
@@ -40,7 +40,7 @@ const References = ({ className = undefined }: IReferencesProps) => {
     {
       title: 'K16 GmbH Webseite',
       description:
-        'Seit über 30 Jahren ist die Hambuger Präsentationsagentur K16 einer der marktführenden Dienstleister für Business-Präsentationen. Getreu den Schlagworten “neu, anders, besser” durfte ich mit Team die technische Umsetzung der neuen Agentur-Website durchführen und diesen bereits im Designprozess zu begleiten.',
+        'Seit über 30 Jahren ist die Hambuger Präsentationsagentur K16 einer der marktführenden Dienstleister für Business-Präsentationen. Getreu den Schlagworten “neu, anders, besser” durfte ich mit Team die technische Umsetzung der neuen Agentur-Website durchführen und bereits den Designprozess beratend begleiten.',
       href: 'https://www.k16.de?ref=christophstockinger.de'
     },
     {
@@ -65,7 +65,7 @@ const References = ({ className = undefined }: IReferencesProps) => {
       <Text className="mt-8">
         <Paragraph>
           Ich bin stolz darauf, mit namhaften Marken und Agenturen
-          zusammengearbeitet zu haben. Nachfolgend ein kleiner Auszug.
+          zusammengearbeitet zu haben. Nachfolgend ein kleiner Auszug:
         </Paragraph>
       </Text>
       <List className="mt-10 sm:mt-12 md:mt-14 lg:mt-16">

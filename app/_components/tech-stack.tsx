@@ -14,7 +14,7 @@ const TechStack = ({ className = undefined }: ITechStackProps) => {
       {
         title: 'Laravel (PHP)',
         description:
-          'Das open-source PHP-Framework ermöglicht es mir, robuste, sichere und skalierbare Webanwendungen zu entwickeln. Es ist besonders gut für maßgeschneiderte Lösungen geeignet.'
+          'Das Open-Source PHP-Framework ermöglicht es mir, robuste, sichere und skalierbare Webanwendungen zu entwickeln. Es ist besonders gut für maßgeschneiderte Lösungen geeignet.'
       },
       {
         title: 'Node.js und Typescript',
@@ -24,12 +24,12 @@ const TechStack = ({ className = undefined }: ITechStackProps) => {
       {
         title: 'React und Next.js',
         description:
-          'Diese Technologien verwende ich für die Erstellung von Benutzeroberflächen, die nicht nur schön aussehen, sondern auch schnell und interaktiv sind.'
+          'Diese Technologien verwende ich für die Erstellung von Benutzeroberflächen, die nicht nur schön aussehen, sondern auch schnell und interaktiv sein sollen.'
       },
       {
         title: 'Statamic und CraftCMS',
         description:
-          'Anhand der Anforderungen analyisiere ich, welches Content-Management-System am besten für die Umsetzung von Webseiten geeignet sind.'
+          'Zwei sehr flexible Content-Management-Systeme, mit denen sehr individuelle Webseiten umgesetzt werden könne. Anhand einer umfangreichen Analyse der Anforderungen wähle ich das passende CMS aus.'
       }
     ]
 
@@ -40,8 +40,8 @@ const TechStack = ({ className = undefined }: ITechStackProps) => {
       </Headline>
       <Text className="mt-8">
         <Paragraph>
-          Ich bin stolz darauf, mit namhaften Marken und Agenturen
-          zusammengearbeitet zu haben. Nachfolgend ein kleiner Auszug.
+          Ich arbeite mit verschiedenen modernen Technologien, um jede Art von
+          Webprojekt zu realisieren. Mein Fokus liegt dabei auf:
         </Paragraph>
       </Text>
       <List className="mt-10 sm:mt-12 md:mt-14 lg:mt-16">
