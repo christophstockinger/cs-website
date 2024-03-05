@@ -1,5 +1,6 @@
 {
   "name": "cs-website",
+  "description": "Personal website of Christoph Stockinger",
   "version": "9.0.0",
   "private": true,
   "scripts": {
