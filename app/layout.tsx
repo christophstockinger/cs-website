@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google'
 import Footer from './_components/footer'
 import ProfilePortrait from './_components/profile-portrait'
 import './globals.css'
+import Script from 'next/script'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -59,6 +60,13 @@ const RootLayout = ({ children }: IRootLayoutProps) => {
           </div>
         </main>
         <Footer />
+        {process.env.VERCEL_ENV === 'production' && (
+          <Script
+            defer
+            data-domain="christophstockinger.de"
+            src="https://plausible.io/js/script.js"
+          />
+        )}
       </body>
     </html>
   )
