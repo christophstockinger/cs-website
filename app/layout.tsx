@@ -4,6 +4,7 @@ import Footer from './_components/footer'
 import ProfilePortrait from './_components/profile-portrait'
 import './globals.css'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ const RootLayout = ({ children }: IRootLayoutProps) => {
             src="https://plausible.io/js/script.js"
           />
         )}
+        <Analytics />
       </body>
     </html>
   )
