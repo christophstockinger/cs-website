@@ -1,0 +1,33 @@
+title: 'Module: Projekte'
+fields:
+  -
+    handle: headline
+    field:
+      type: text
+      display: Überschrift
+      sortable: false
+      duplicate: false
+      actions: false
+      validate:
+        - required
+  -
+    handle: projects
+    field:
+      collections:
+        - projects
+      type: entries
+      display: Projekte
+      validate:
+        - required
+  -
+    handle: show_overview_link
+    field:
+      inline_label: Anzeigen
+      inline_label_when_true: Ausblenden
+      type: toggle
+      display: 'Link zur Übersichtsseite anzeigen'
+      width: 50
+      sortable: false
+      replicator_preview: false
+      duplicate: false
+      actions: false

@@ -1,0 +1,30 @@
+title: Page
+tabs:
+  main:
+    display: Hauptbereich
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: page_builder
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

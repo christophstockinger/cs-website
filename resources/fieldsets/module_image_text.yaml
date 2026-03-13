@@ -1,0 +1,73 @@
+title: 'Module: Bild-Text'
+fields:
+  -
+    handle: image
+    field:
+      container: assets
+      max_files: 1
+      min_files: 1
+      type: assets
+      display: Bild
+      sortable: false
+      replicator_preview: false
+      duplicate: false
+      actions: false
+      validate:
+        - required
+  -
+    handle: headline
+    field:
+      type: text
+      display: Überschrift
+      sortable: false
+      replicator_preview: false
+      duplicate: false
+      actions: false
+  -
+    handle: text
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - superscript
+        - subscript
+      container: assets
+      collapse: accordion
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+      sortable: false
+      replicator_preview: false
+      duplicate: false
+      actions: false
+  -
+    import: button
+  -
+    handle: settings
+    field:
+      fullscreen: false
+      type: group
+      display: Einstellungen
+      fields:
+        -
+          handle: anordnung
+          field:
+            options:
+              -
+                key: image-text
+                value: 'Bild links - Text rechts'
+              -
+                key: text-image
+                value: 'Text links - Bild rechts'
+            default: image-text
+            type: button_group
+            display: Anordnung
+            sortable: false
+            replicator_preview: false
+            duplicate: false
+            actions: false

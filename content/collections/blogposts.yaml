@@ -1,0 +1,17 @@
+title: Blogbeiträge
+icon: media-news-paper
+template: default
+layout: layout
+mount: d452f258-f215-4f7f-beae-d58d8f385f80
+revisions: false
+route: '/blog/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

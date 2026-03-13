@@ -1,8 +1,30 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: home
+modules:
+  -
+    id: zxfOTR6z7fl9dCedQc19M
+    type: hero
+    enabled: true
+  -
+    id: 3Mpzc907B_lqWXu_dZo0o
+    headline: Projekte
+    projects:
+      - 2c030c26-7914-4f6e-b10e-cf308461f166
+    show_overview_link: true
+    type: projects
+    enabled: true
+  -
+    id: vYt5_lvfXVoGBHVQfCEe9
+    headline: Blog
+    blogpost_count: 3
+    show_overview_link: true
+    type: blogposts
+    enabled: true
+updated_by: 8a4861ee-a322-4bf6-a4d4-5ca04977a0d9
+updated_at: 1773439735
 ---
 ## Welcome to your brand new Statamic site!
 
