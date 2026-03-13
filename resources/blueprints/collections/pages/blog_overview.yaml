@@ -1,0 +1,38 @@
+hide: true
+title: Blog-Overview
+tabs:
+  main:
+    display: Hauptbereich
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: text
+            field:
+              buttons:
+                - bold
+                - italic
+                - removeformat
+              container: assets
+              remove_empty_nodes: trim
+              type: bard
+              display: Text
+              hide_display: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

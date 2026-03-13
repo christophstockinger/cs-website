@@ -1,0 +1,52 @@
+hide: true
+title: Legal-Page
+tabs:
+  main:
+    display: Hauptbereich
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - h4
+                - h5
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+                - underline
+                - strikethrough
+                - superscript
+                - subscript
+              link_noopener: true
+              link_noreferrer: true
+              target_blank: true
+              container: assets
+              remove_empty_nodes: trim
+              type: bard
+              display: Inhalt
+              hide_display: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

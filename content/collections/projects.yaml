@@ -1,0 +1,15 @@
+title: Projekte
+icon: social-dropbox-logo
+template: default
+layout: layout
+mount: 30957526-50b0-41ae-a8ce-15d6f4ce8297
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: null
+  future: null
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
