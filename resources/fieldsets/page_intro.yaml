@@ -1,0 +1,18 @@
+title: 'Seiten-Intro'
+fields:
+  -
+    handle: eyebrow
+    field:
+      type: text
+      display: Label
+      instructions: 'Kleine Versalzeile über der Überschrift, z. B. „Hallo, ich bin" oder „Rechtliches".'
+      localizable: true
+  -
+    handle: headline
+    field:
+      type: textarea
+      display: Überschrift
+      instructions: 'Die große Serifen-Überschrift. Jede Zeile wird als eigener Umbruch gesetzt.'
+      localizable: true
+      validate:
+        - required

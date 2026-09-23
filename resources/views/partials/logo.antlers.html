@@ -1,0 +1,9 @@
+{{#
+    Logo aus dem Global Set „Allgemein". Wird inline ausgegeben, damit currentColor
+    und der Hover auf Signal greifen.
+#}}
+<a
+    href="/"
+    aria-label="{{ general:logo_label }}"
+    class="flex items-center py-2.5 text-chalk transition-colors hover:text-signal md:py-2 [&>svg]:h-[26px] [&>svg]:w-auto md:[&>svg]:h-9"
+>{{ general:logo_svg:code }}</a>

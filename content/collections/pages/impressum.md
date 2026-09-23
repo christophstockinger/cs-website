@@ -1,143 +1,27 @@
 ---
-id: ce957115-ae30-4f82-a866-fcb68456bd9b
-blueprint: legal_page
+id: f48cc475-b109-461a-a636-e9f7e1ad1bf4
+blueprint: legal
+template: legal
 title: Impressum
-updated_by: 8a4861ee-a322-4bf6-a4d4-5ca04977a0d9
-updated_at: 1773441334
-content:
+eyebrow: Rechtliches
+headline: Impressum
+sections:
   -
-    type: heading
-    attrs:
-      level: 2
-    content:
-      -
-        type: text
-        text: 'Angaben gemäß §5 TMG'
+    id: 0ea98873-4633-4958-aa46-d6a0ac17fa74
+    heading: 'Angaben gemäß § 5 DDG'
+    text: |
+      Christoph Stockinger\
+      [Straße Hausnummer]\
+      [PLZ] Passau\
+      Deutschland
   -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'C77 Digital GmbH'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Stephanstraße 64'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '94034 Passau'
+    id: b118dd4c-1d70-49da-bc46-20ba252a2e1f
+    heading: Kontakt
+    text: |
+      E-Mail: [\[E-MAIL-ADRESSE\]](mailto:[E-MAIL])\
+      Telefon: [TELEFON]
   -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Vertreten durch:'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Christoph Stockinger'
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Registereintrag:'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Amtsgericht Passau'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Handelsregister: HRB 11980'
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: DE338774960
-  -
-    type: heading
-    attrs:
-      level: 2
-    content:
-      -
-        type: text
-        text: Haftungsausschluss
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Haftung für Inhalte'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.'
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Haftung für Links'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.'
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: Urheberrecht
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.'
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: Datenschutz
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.'
+    id: 8b710477-cb69-444c-a810-f946f27f09cc
+    heading: Bildnachweis
+    text: '[Eigene Aufnahmen oder Name der Fotografin / des Fotografen]'
 ---

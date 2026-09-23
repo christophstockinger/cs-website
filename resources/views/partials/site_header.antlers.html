@@ -1,0 +1,12 @@
+{{# Kopf der Unterseiten: Logo links, Rückweg zur Startseite rechts. #}}
+<header class="flex items-center justify-between gap-6">
+    {{ partial:partials/logo }}
+
+    <a href="/" class="flex items-center gap-2 py-3 text-link text-chalk uppercase transition-colors hover:text-signal md:gap-2.5">
+        <svg class="size-4 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="md:hidden">Startseite</span>
+        <span class="hidden md:inline">Zur Startseite</span>
+    </a>
+</header>

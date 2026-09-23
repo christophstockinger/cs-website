@@ -1,0 +1,26 @@
+title: 'Hintergrund-Slideshow'
+fields:
+  -
+    handle: backdrop_images
+    field:
+      type: assets
+      display: Hintergrundbilder
+      instructions: 'Blenden im Hintergrund nacheinander durch. Ab dem zweiten Bild läuft die Animation, darunter steht das Bild still.'
+      container: assets
+      folder: backgrounds
+      mode: grid
+      allow_uploads: true
+      validate:
+        - array
+  -
+    handle: backdrop_interval
+    field:
+      type: integer
+      display: 'Wechsel alle (Sekunden)'
+      instructions: 'Wie lange ein Bild steht, bevor zum nächsten geblendet wird.'
+      default: 5
+      width: 33
+      validate:
+        - 'integer'
+        - 'min:2'
+        - 'max:60'

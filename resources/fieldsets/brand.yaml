@@ -1,0 +1,34 @@
+title: Marke
+fields:
+  -
+    handle: logo_svg
+    field:
+      type: code
+      display: 'Logo (SVG)'
+      instructions: 'Wird inline ausgegeben. `fill="currentColor"` beibehalten, damit Textfarbe und Hover greifen.'
+      mode: htmlmixed
+      indent_size: 2
+  -
+    handle: logo_label
+    field:
+      type: text
+      display: 'Logo — Beschriftung'
+      instructions: 'Für Screenreader, z. B. „Christoph Stockinger, Startseite".'
+      validate:
+        - required
+  -
+    handle: brand_name
+    field:
+      type: text
+      display: Name
+      instructions: 'Für die Copyright-Zeile.'
+      width: 50
+      validate:
+        - required
+  -
+    handle: brand_name_short
+    field:
+      type: text
+      display: 'Name (kurz)'
+      instructions: 'Auf schmalen Viewports, z. B. „C. Stockinger".'
+      width: 50
