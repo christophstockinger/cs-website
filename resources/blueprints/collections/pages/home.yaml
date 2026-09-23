@@ -18,6 +18,8 @@ tabs:
           -
             import: page_intro
           -
+            import: location
+          -
             import: tag_list
   backdrop:
     display: Hintergrund
@@ -26,3 +28,10 @@ tabs:
         fields:
           -
             import: backdrop
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

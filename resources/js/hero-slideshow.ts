@@ -1,47 +1,35 @@
 /**
  * Hintergrund-Slideshow der Startseite.
  *
- * Blendet die im CMS gepflegten Bilder nacheinander durch, fährt dabei einen
- * langsamen Ken-Burns-Zoom und füllt synchron die Indicator-Balken. Ohne
- * externe Abhängigkeiten, komplett über die Web Animations API.
+ * Die Bilder stehen still — gewechselt wird nur durch eine weiche Blende, deren
+ * Dauer in der Klasse `transition-opacity duration-2000` am Slide steht. Die
+ * Indicator-Balken laufen synchron mit dem Takt mit; es kann mehrere Gruppen
+ * geben (mobil im Kopf, ab md unten rechts), die alle dasselbe anzeigen.
  *
  * Markup-Vertrag:
  *   [data-slideshow]                – Wurzel; umschließt Bilder UND Indicator,
  *                                     data-slideshow-interval in Sekunden
  *     [data-slideshow-slide]        – eine Ebene pro Bild
- *       [data-slideshow-zoom]       – das Element, das den Zoom fährt
- *     [data-slideshow-indicators]   – beliebig viele Gruppen (mobil/desktop)
+ *     [data-slideshow-indicators]   – beliebig viele Gruppen
  *       [data-slideshow-fill]       – ein Balken pro Bild, in gleicher Reihenfolge
  */
 
-const FADE_MS = 1200;
-const ZOOM_SCALE = 1.08;
 const DEFAULT_INTERVAL_SECONDS = 5;
-
-type Slide = {
-    layer: HTMLElement;
-    zoom: HTMLElement | null;
-};
 
 function prefersReducedMotion(): boolean {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 class HeroSlideshow {
-    private readonly slides: Slide[];
+    private readonly slides: HTMLElement[];
     private readonly indicatorGroups: HTMLElement[][];
     private readonly intervalMs: number;
 
     private index = 0;
     private timer: ReturnType<typeof setTimeout> | null = null;
-    private zoomAnimations = new Map<number, Animation>();
-    private fillAnimations: Animation[] = [];
 
     constructor(root: HTMLElement) {
-        this.slides = Array.from(root.querySelectorAll<HTMLElement>('[data-slideshow-slide]')).map((layer) => ({
-            layer,
-            zoom: layer.querySelector<HTMLElement>('[data-slideshow-zoom]'),
-        }));
+        this.slides = Array.from(root.querySelectorAll<HTMLElement>('[data-slideshow-slide]'));
 
         this.indicatorGroups = Array.from(root.querySelectorAll<HTMLElement>('[data-slideshow-indicators]')).map(
             (group) => Array.from(group.querySelectorAll<HTMLElement>('[data-slideshow-fill]')),
@@ -56,117 +44,87 @@ class HeroSlideshow {
             return;
         }
 
-        this.reveal(0);
+        this.show(0);
 
-        // Ein einzelnes Bild oder reduzierte Bewegung: stehendes Bild, gefüllter erster Balken.
+        // Ein einzelnes Bild oder reduzierte Bewegung: stehendes Bild, erster Balken voll.
         if (this.slides.length < 2 || prefersReducedMotion()) {
-            this.fillsAt(0).forEach((fill) => {
-                fill.style.transform = 'scaleX(1)';
-            });
+            this.runBars(0, 0);
 
             return;
         }
 
-        this.runZoom(0);
-        this.runFill(0);
-        this.scheduleNext(this.intervalMs);
+        this.runCycle();
 
+        // Im versteckten Tab laufen weder Timer noch Transitions zuverlässig. Statt den
+        // Takt nachzurechnen, beginnt der aktuelle Durchlauf bei der Rückkehr neu.
         document.addEventListener('visibilitychange', () => {
-            document.hidden ? this.pause() : this.resume();
+            if (document.hidden) {
+                this.stopTimer();
+            } else {
+                this.runCycle();
+            }
         });
     }
 
-    private advance(): void {
-        const previous = this.index;
-        this.index = (this.index + 1) % this.slides.length;
+    /** Zeigt das aktuelle Bild, füllt seinen Balken und plant den nächsten Wechsel. */
+    private runCycle(): void {
+        this.show(this.index);
+        this.runBars(this.index, this.intervalMs);
 
-        this.reveal(this.index);
-        this.runZoom(this.index);
-        this.runFill(this.index);
-
-        // Der Zoom der abgelösten Ebene läuft noch bis zum Ende der Blende weiter.
-        window.setTimeout(() => this.resetZoom(previous), FADE_MS);
-
-        this.scheduleNext(this.intervalMs);
+        this.stopTimer();
+        this.timer = setTimeout(() => {
+            this.index = (this.index + 1) % this.slides.length;
+            this.runCycle();
+        }, this.intervalMs);
     }
 
-    private reveal(index: number): void {
+    private show(index: number): void {
         this.slides.forEach((slide, i) => {
-            slide.layer.style.opacity = i === index ? '1' : '0';
+            slide.style.opacity = i === index ? '1' : '0';
         });
     }
 
-    private runZoom(index: number): void {
-        const zoom = this.slides[index]?.zoom;
+    /**
+     * Setzt alle Balken zurück und lässt den aktiven über `durationMs` volllaufen.
+     * Bei `durationMs = 0` steht er sofort voll.
+     */
+    private runBars(index: number, durationMs: number): void {
+        const all = this.indicatorGroups.flat();
 
-        if (!zoom) {
+        if (all.length === 0) {
             return;
         }
 
-        this.zoomAnimations.get(index)?.cancel();
-
-        this.zoomAnimations.set(
-            index,
-            zoom.animate({ transform: ['scale(1)', `scale(${ZOOM_SCALE})`] }, {
-                duration: this.intervalMs + FADE_MS,
-                easing: 'linear',
-                fill: 'forwards',
-            }),
-        );
-    }
-
-    private resetZoom(index: number): void {
-        this.zoomAnimations.get(index)?.cancel();
-        this.zoomAnimations.delete(index);
-    }
-
-    private runFill(index: number): void {
-        this.fillAnimations.forEach((animation) => animation.cancel());
-
-        this.indicatorGroups.forEach((group) => {
-            group.forEach((fill) => {
-                fill.style.transform = 'scaleX(0)';
-            });
+        all.forEach((fill) => {
+            fill.style.transition = 'none';
+            fill.style.transform = 'scaleX(0)';
         });
 
-        this.fillAnimations = this.fillsAt(index).map((fill) =>
-            fill.animate({ transform: ['scaleX(0)', 'scaleX(1)'] }, {
-                duration: this.intervalMs,
-                easing: 'linear',
-                fill: 'forwards',
-            }),
-        );
+        const active = this.indicatorGroups
+            .map((group) => group[index])
+            .filter((fill): fill is HTMLElement => Boolean(fill));
+
+        const first = active[0];
+
+        if (!first) {
+            return;
+        }
+
+        // Reflow erzwingen, sonst fasst der Browser Rücksetzen und Füllen zu einem
+        // Schritt zusammen und die Transition läuft nie los.
+        void first.offsetWidth;
+
+        active.forEach((fill) => {
+            fill.style.transition = durationMs > 0 ? `transform ${durationMs}ms linear` : 'none';
+            fill.style.transform = 'scaleX(1)';
+        });
     }
 
-    private fillsAt(index: number): HTMLElement[] {
-        return this.indicatorGroups.map((group) => group[index]).filter((fill): fill is HTMLElement => Boolean(fill));
-    }
-
-    private scheduleNext(delay: number): void {
-        this.clearTimer();
-        this.timer = setTimeout(() => this.advance(), delay);
-    }
-
-    private clearTimer(): void {
+    private stopTimer(): void {
         if (this.timer !== null) {
             clearTimeout(this.timer);
             this.timer = null;
         }
-    }
-
-    private pause(): void {
-        this.clearTimer();
-        this.fillAnimations.forEach((animation) => animation.pause());
-        this.zoomAnimations.forEach((animation) => animation.pause());
-    }
-
-    private resume(): void {
-        this.fillAnimations.forEach((animation) => animation.play());
-        this.zoomAnimations.forEach((animation) => animation.play());
-
-        // Der Fortschrittsbalken ist die Uhr: er sagt, wie viel vom Takt noch übrig ist.
-        const elapsed = Number(this.fillAnimations[0]?.currentTime ?? 0);
-        this.scheduleNext(Math.max(this.intervalMs - elapsed, 0));
     }
 }
 

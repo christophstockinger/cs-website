@@ -1,0 +1,21 @@
+title: Inhalt
+fields:
+  -
+    handle: content
+    field:
+      type: bard
+      display: Inhalt
+      instructions: 'Fließtext mit Zwischenüberschriften. Als Überschriften stehen H2 und H3 zur Verfügung — H1 ist der Seitentitel und wird nicht im Text vergeben.'
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - anchor
+      container: assets
+      remove_empty_nodes: trim
+      localizable: true
+      validate:
+        - required

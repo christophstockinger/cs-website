@@ -5,23 +5,68 @@ template: legal
 title: Impressum
 eyebrow: Rechtliches
 headline: Impressum
-sections:
+location: 'Passau, Bayern'
+seo_title: 'Impressum — Christoph Stockinger'
+seo_description: 'Anbieterkennzeichnung nach § 5 DDG für christophstockinger.de.'
+seo_noindex: false
+updated_by: 587db876-094c-4de4-8548-8a5b38df5ca9
+updated_at: 1790187173
+content:
   -
-    id: 0ea98873-4633-4958-aa46-d6a0ac17fa74
-    heading: 'Angaben gemäß § 5 DDG'
-    text: |
-      Christoph Stockinger\
-      [Straße Hausnummer]\
-      [PLZ] Passau\
-      Deutschland
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: 'Angaben gemäß § 5 DDG'
   -
-    id: b118dd4c-1d70-49da-bc46-20ba252a2e1f
-    heading: Kontakt
-    text: |
-      E-Mail: [\[E-MAIL-ADRESSE\]](mailto:[E-MAIL])\
-      Telefon: [TELEFON]
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'C77 Digital GmbH'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Stephanstraße 64'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '94034 Passau'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Deutschland
   -
-    id: 8b710477-cb69-444c-a810-f946f27f09cc
-    heading: Bildnachweis
-    text: '[Eigene Aufnahmen oder Name der Fotografin / des Fotografen]'
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: Kontakt
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'E-Mail: info@c77.digital'
+  -
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: Bildnachweis
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'C77 Digital GmbH'
 ---

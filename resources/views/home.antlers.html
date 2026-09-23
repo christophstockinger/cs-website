@@ -1,57 +1,48 @@
-<main
-    class="relative flex min-h-dvh flex-col justify-between overflow-hidden px-6 pt-7 pb-8 md:px-16 md:py-12"
-    data-slideshow
-    data-slideshow-interval="{{ backdrop_interval ?? 5 }}"
->
+<main class="relative flex min-h-dvh flex-col justify-between overflow-hidden px-6 pt-7 pb-8 md:px-16 md:py-12"
+    data-slideshow data-slideshow-interval="{{ backdrop_interval ?? 5 }}">
     {{#
-        Hintergrund: die gepflegten Bilder liegen übereinander, das Skript blendet sie
-        durch und fährt dabei einen langsamen Zoom. Ohne JS bleibt das erste Bild stehen.
+        Hintergrund: die gepflegten Bilder liegen still übereinander, das Skript blendet
+        sie weich ineinander. Ohne JavaScript bleibt das erste Bild stehen.
     #}}
     <div class="absolute inset-0" aria-hidden="true">
         {{ if backdrop_images }}
-        {{ backdrop_images }}
-            <div
-                class="absolute inset-0 transition-opacity duration-[1200ms] ease-out {{ if first }}opacity-100{{ else }}opacity-0{{ /if }}"
-                data-slideshow-slide
-            >
-                <div class="absolute -inset-[4%]" data-slideshow-zoom>
-                    <img
-                        src="{{ glide src='{id}' preset='hero_md' }}"
+            {{ backdrop_images }}
+                <div class="absolute inset-0 transition-opacity duration-2000 ease-in-out {{ if first }}opacity-100{{ else }}opacity-0{{ /if }}"
+                    data-slideshow-slide>
+                    <img src="{{ glide src='{id}' preset='hero_md' }}"
                         srcset="{{ glide src='{id}' preset='hero_sm' }} 900w, {{ glide src='{id}' preset='hero_md' }} 1600w, {{ glide src='{id}' preset='hero_lg' }} 2400w"
-                        sizes="100vw"
-                        width="{{ width }}"
-                        height="{{ height }}"
-                        alt=""
+                        sizes="100vw" width="{{ width }}" height="{{ height }}" alt=""
                         class="h-full w-full object-cover"
-                        {{ if first }}fetchpriority="high"{{ else }}loading="lazy"{{ /if }}
-                    >
+                        style="object-position: {{ focus_css }}"
+                        {{ if first }}fetchpriority="high"{{ else }}loading="lazy"{{ /if }}>
                 </div>
-            </div>
-        {{ /backdrop_images }}
+            {{ /backdrop_images }}
         {{ /if }}
     </div>
-    <div class="hero-scrim pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    {{# Ruhige Fläche zwischen Bild und Text, damit die Schrift überall trägt. #}}
+    <div class="pointer-events-none absolute inset-0 bg-night/70" aria-hidden="true"></div>
 
     <header class="relative flex items-center justify-between gap-6">
         {{ partial:partials/logo }}
-
         {{ if backdrop_images | length > 1 }}
             {{ partial:partials/slideshow_indicators class="flex gap-1.5 md:hidden" bar_class="w-7" }}
         {{ /if }}
-
-        <p class="hidden text-label text-stone uppercase md:block">{{ general:location }}</p>
+        {{ if location }}
+            <p class="hidden text-label text-stone uppercase md:block">{{ location }}</p>
+        {{ /if }}
     </header>
 
     <div class="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-12">
         <div class="flex flex-col gap-6 md:gap-8">
             {{ partial:partials/eyebrow }}
-
             <h1 class="font-display text-display text-chalk italic">{{ headline | nl2br }}</h1>
-
             {{ if tags }}
                 <ul class="flex flex-wrap gap-2 md:gap-3">
                     {{ tags }}
-                        <li class="rounded-full border border-chalk/35 bg-night/35 px-3.5 py-2 text-tag md:px-4.5 md:py-2.5">{{ value }}</li>
+                        <li
+                            class="rounded-full border border-chalk/35 bg-night/80 px-3.5 py-2 text-tag md:px-4.5 md:py-2.5">
+                            {{ value }}
+                        </li>
                     {{ /tags }}
                 </ul>
             {{ /if }}
@@ -59,15 +50,17 @@
 
         <div class="flex flex-col gap-6 md:items-end md:gap-7 md:pb-2">
             <hr class="h-px w-full border-0 bg-chalk/20 md:hidden">
-
             {{ if backdrop_images | length > 1 }}
                 {{ partial:partials/slideshow_indicators class="hidden gap-2 md:flex" bar_class="w-14" }}
             {{ /if }}
-
             <div class="flex w-full items-center justify-between gap-6 md:w-auto md:justify-end">
                 {{ partial:partials/legal_nav }}
-                <span class="text-label text-stone uppercase md:hidden">{{ general:location_short }}</span>
+                {{ if location }}
+                    <span class="text-label text-stone uppercase md:hidden">{{ location }}</span>
+                {{ /if }}
             </div>
         </div>
     </div>
 </main>
+
+{{ partial:partials/schema_person }}

@@ -5,12 +5,5 @@ fields:
     field:
       type: text
       display: Ort
-      instructions: 'z. B. „Passau, Bayern".'
-      width: 50
-  -
-    handle: location_short
-    field:
-      type: text
-      display: 'Ort (kurz)'
-      instructions: 'Auf schmalen Viewports, z. B. „Passau".'
-      width: 50
+      instructions: 'Steht im Seitenkopf bzw. im Fuß, z. B. „Passau, Bayern".'
+      localizable: true

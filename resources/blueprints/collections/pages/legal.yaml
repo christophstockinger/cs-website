@@ -17,4 +17,13 @@ tabs:
           -
             import: page_intro
           -
-            import: content_sections
+            import: location
+          -
+            import: rich_content
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

@@ -3,14 +3,19 @@
     keine Information. Wird zweimal ausgegeben (mobil im Kopf, ab md unten rechts);
     das Skript hält alle Gruppen synchron.
 
+    Der Startzustand steht bewusst als inline-transform und nicht als scale-x-0:
+    Tailwinds scale-Utility schreibt die eigenständige scale-Property, die der
+    Browser zusätzlich zu transform verrechnet — der Balken bliebe dauerhaft leer.
+
     Parameter: class (Wrapper), bar_class (Breite eines Balkens)
 #}}
 <div class="{{ class }}" data-slideshow-indicators aria-hidden="true">
     {{ if backdrop_images }}
-    {{ backdrop_images }}
-        <div class="h-[3px] overflow-hidden rounded-[2px] bg-chalk/25 {{ bar_class }}">
-            <span class="block h-full w-full origin-left scale-x-0 bg-signal" data-slideshow-fill></span>
-        </div>
-    {{ /backdrop_images }}
+        {{ backdrop_images }}
+            <div class="h-[3px] overflow-hidden bg-chalk/25 -skew-x-30 {{ bar_class }}">
+                <span class="block h-full w-full origin-left bg-signal" style="transform: scaleX(0);"
+                    data-slideshow-fill></span>
+            </div>
+        {{ /backdrop_images }}
     {{ /if }}
 </div>
