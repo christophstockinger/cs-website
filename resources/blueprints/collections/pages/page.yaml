@@ -22,3 +22,10 @@ tabs:
               type: markdown
               display: Inhalt
               localizable: true
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

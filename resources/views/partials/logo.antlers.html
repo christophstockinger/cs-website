@@ -1,9 +1,14 @@
 {{#
-    Logo aus dem Global Set „Allgemein". Wird inline ausgegeben, damit currentColor
-    und der Hover auf Signal greifen.
+    Logo aus dem Global Set „Allgemein". Die hochgeladene SVG-Datei wird inline
+    eingebunden (und dabei von Statamic sanitisiert), damit currentColor und der
+    Hover auf Signal greifen. Der Alt-Text des Assets beschriftet den Link.
 #}}
-<a
-    href="/"
-    aria-label="{{ general:logo_label }}"
-    class="flex items-center py-2.5 text-chalk transition-colors hover:text-signal md:py-2 [&>svg]:h-[26px] [&>svg]:w-auto md:[&>svg]:h-9"
->{{ general:logo_svg:code }}</a>
+{{ if general:logo }}
+    <a
+        href="/"
+        aria-label="{{ general:logo:alt ?? general:brand_name }}"
+        class="flex items-center py-2.5 text-chalk transition-colors hover:text-signal md:py-2"
+    >
+        {{ svg src="{general:logo:url}" class="h-[26px] w-auto md:h-9" aria-hidden="true" }}
+    </a>
+{{ /if }}

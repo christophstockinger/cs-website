@@ -1,0 +1,22 @@
+title: 'SEO-Vorgaben'
+fields:
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: Standardbeschreibung
+      instructions: 'Greift auf jeder Seite, die keine eigene Beschreibung gepflegt hat.'
+      character_limit: 200
+      validate:
+        - required
+  -
+    handle: seo_image
+    field:
+      type: assets
+      display: 'Standardbild beim Teilen'
+      instructions: 'Vorschaubild für alle Seiten ohne eigenes Bild. Wird auf 1200 × 630 beschnitten.'
+      container: assets
+      folder: seo
+      max_files: 1
+      mode: list
+      allow_uploads: true

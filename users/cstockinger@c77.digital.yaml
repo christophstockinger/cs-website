@@ -2,3 +2,9 @@ name: 'Christoph Stockinger'
 super: true
 id: 587db876-094c-4de4-8548-8a5b38df5ca9
 password_hash: $2y$12$ik/zhqiVQM1Xp964E8IQN.vMhD.MbmHZ1lRqajgHy2ogs66eNS7ZS
+preferences:
+  collections:
+    pages:
+      view: tree
+  assets:
+    editor_checkerboard_mode: light

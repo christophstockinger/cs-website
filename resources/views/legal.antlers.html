@@ -1,20 +1,15 @@
 <main class="flex min-h-dvh flex-col justify-between gap-10 px-6 pt-7 pb-8 md:gap-12 md:px-16 md:py-12">
     {{ partial:partials/site_header }}
 
-    <div class="flex grow flex-col gap-5 md:grid md:grid-cols-12 md:items-start md:gap-x-6">
+    <div class="flex grow flex-col gap-5 max-md:justify-center md:grid md:grid-cols-12 md:content-center md:items-start md:gap-x-6">
         <div class="flex flex-col gap-5 md:col-span-5 md:gap-6">
             {{ partial:partials/eyebrow }}
 
             <h1 class="font-display text-title text-chalk italic">{{ headline | nl2br }}</h1>
         </div>
 
-        <div class="flex flex-col gap-8 md:col-span-6 md:col-start-7 md:gap-10 md:pt-11">
-            {{ sections }}
-                <section class="flex flex-col gap-3">
-                    <h2 class="text-label text-stone uppercase">{{ heading }}</h2>
-                    <div class="rich-text">{{ text }}</div>
-                </section>
-            {{ /sections }}
+        <div class="prose prose-site max-w-none md:col-span-6 md:col-start-7 md:pt-11">
+            {{ content }}
         </div>
     </div>
 

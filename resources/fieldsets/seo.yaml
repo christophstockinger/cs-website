@@ -1,0 +1,35 @@
+title: SEO
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'Titel für Suchmaschinen'
+      instructions: 'Steht im Browser-Tab und als Überschrift im Suchergebnis. Leer lassen übernimmt den Seitentitel. Etwa 50–60 Zeichen.'
+      localizable: true
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: Beschreibung
+      instructions: 'Der Text unter dem Suchergebnis. Etwa 150–160 Zeichen. Leer lassen greift auf die Standardbeschreibung zurück.'
+      character_limit: 200
+      localizable: true
+  -
+    handle: seo_image
+    field:
+      type: assets
+      display: 'Bild beim Teilen'
+      instructions: 'Erscheint als Vorschau, wenn die Seite in sozialen Netzwerken oder Messengern geteilt wird. Wird auf 1200 × 630 beschnitten. Leer lassen greift auf das Standardbild zurück.'
+      container: assets
+      folder: seo
+      max_files: 1
+      mode: list
+      allow_uploads: true
+  -
+    handle: seo_noindex
+    field:
+      type: toggle
+      display: 'Von Suchmaschinen ausschließen'
+      instructions: 'Bittet Google und andere, diese Seite nicht in den Index aufzunehmen. Die Seite bleibt öffentlich erreichbar.'
+      default: false

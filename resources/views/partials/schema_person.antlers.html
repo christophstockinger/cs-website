@@ -1,0 +1,19 @@
+{{#
+    Strukturierte Daten zur Person. Google liest daraus Name, Tätigkeiten und Ort —
+    Grundlage für das Knowledge-Panel. Werte kommen aus den Feldern der Startseite.
+#}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ general:brand_name | to_json }},
+    "url": {{ permalink | to_json }}{{ if tags }},
+    "jobTitle": {{ tags | to_json }}{{ /if }}{{ if location }},
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ location | to_json }},
+        "addressCountry": "DE"
+    }{{ /if }}{{ if general:seo_image }},
+    "image": {{ "{config:app:url}{general:seo_image:url}" | to_json }}{{ /if }}
+}
+</script>

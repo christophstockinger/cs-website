@@ -101,6 +101,12 @@ return [
             'hero_sm' => ['w' => 900, 'q' => 70, 'fm' => 'webp'],
             'hero_md' => ['w' => 1600, 'q' => 70, 'fm' => 'webp'],
             'hero_lg' => ['w' => 2400, 'q' => 65, 'fm' => 'webp'],
+
+            // Vorschaubild beim Teilen. Der Beschnitt auf 1200 x 630 folgt dem Fokuspunkt,
+            // weil 'auto_crop' weiter unten aktiv ist — ein explizites 'fit' => 'crop_focal'
+            // verwirft Statamic an dieser Stelle ohnehin.
+            // Bewusst jpg statt webp — nicht jeder Messenger zeigt webp-Vorschauen an.
+            'og' => ['w' => 1200, 'h' => 630, 'q' => 80, 'fm' => 'jpg'],
         ],
 
         /*

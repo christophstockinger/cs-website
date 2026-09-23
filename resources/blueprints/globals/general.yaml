@@ -5,12 +5,16 @@ tabs:
     sections:
       -
         display: Marke
-        instructions: 'Logo und Namen — gelten auf allen Seiten.'
+        instructions: 'Logo und Name — gelten auf allen Seiten.'
         fields:
           -
             import: brand
+  seo:
+    display: SEO
+    sections:
       -
-        display: Ort
+        display: 'Vorgaben für alle Seiten'
+        instructions: 'Greifen überall dort, wo eine Seite nichts Eigenes gepflegt hat.'
         fields:
           -
-            import: location
+            import: seo_defaults
