@@ -1,0 +1,8 @@
+{{# Verweise auf die rechtlichen Seiten — kommt aus dem Seitenbaum, nicht fest verdrahtet. #}}
+<nav aria-label="Rechtliches" class="flex gap-5 md:gap-7">
+    {{ nav handle="collection::pages" }}
+        {{ if template == "legal" }}
+            <a href="{{ url }}" class="py-3 text-link text-chalk uppercase transition-colors hover:text-signal">{{ title }}</a>
+        {{ /if }}
+    {{ /nav }}
+</nav>

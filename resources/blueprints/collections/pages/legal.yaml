@@ -1,5 +1,5 @@
-title: Seite
-order: 1
+title: 'Rechtliche Seite'
+order: 2
 tabs:
   main:
     display: Inhalt
@@ -17,8 +17,4 @@ tabs:
           -
             import: page_intro
           -
-            handle: content
-            field:
-              type: markdown
-              display: Inhalt
-              localizable: true
+            import: content_sections

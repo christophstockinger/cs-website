@@ -1,5 +1,5 @@
-title: Seite
-order: 1
+title: Startseite
+order: 3
 tabs:
   main:
     display: Inhalt
@@ -11,14 +11,18 @@ tabs:
             field:
               type: text
               display: Titel
+              instructions: 'Nur intern und für den Browser-Tab — auf der Seite steht die Überschrift unten.'
               localizable: true
               validate:
                 - required
           -
             import: page_intro
           -
-            handle: content
-            field:
-              type: markdown
-              display: Inhalt
-              localizable: true
+            import: tag_list
+  backdrop:
+    display: Hintergrund
+    sections:
+      -
+        fields:
+          -
+            import: backdrop

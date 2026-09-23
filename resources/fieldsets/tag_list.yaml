@@ -1,0 +1,10 @@
+title: Begriffe
+fields:
+  -
+    handle: tags
+    field:
+      type: list
+      display: Begriffe
+      instructions: 'Die Pills unter der Überschrift, z. B. „Software Developer".'
+      add_button: 'Begriff hinzufügen'
+      localizable: true

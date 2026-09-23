@@ -1,0 +1,16 @@
+title: Allgemein
+tabs:
+  main:
+    display: Allgemein
+    sections:
+      -
+        display: Marke
+        instructions: 'Logo und Namen — gelten auf allen Seiten.'
+        fields:
+          -
+            import: brand
+      -
+        display: Ort
+        fields:
+          -
+            import: location

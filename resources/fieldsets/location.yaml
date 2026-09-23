@@ -1,0 +1,16 @@
+title: Ort
+fields:
+  -
+    handle: location
+    field:
+      type: text
+      display: Ort
+      instructions: 'z. B. „Passau, Bayern".'
+      width: 50
+  -
+    handle: location_short
+    field:
+      type: text
+      display: 'Ort (kurz)'
+      instructions: 'Auf schmalen Viewports, z. B. „Passau".'
+      width: 50

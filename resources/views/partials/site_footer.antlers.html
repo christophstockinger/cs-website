@@ -1,0 +1,12 @@
+{{# Fuß der Unterseiten: Copyright und Ort, beides aus dem Global Set. #}}
+<footer class="flex items-center justify-between gap-6 border-t border-line pt-5 text-label text-stone uppercase md:pt-6">
+    <span>
+        © {{ now format="Y" }}
+        <span class="md:hidden">{{ general:brand_name_short ?? general:brand_name }}</span>
+        <span class="hidden md:inline">{{ general:brand_name }}</span>
+    </span>
+    <span>
+        <span class="md:hidden">{{ general:location_short ?? general:location }}</span>
+        <span class="hidden md:inline">{{ general:location }}</span>
+    </span>
+</footer>

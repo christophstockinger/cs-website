@@ -72,6 +72,19 @@ return [
 
         /*
         |--------------------------------------------------------------------------
+        | Crop Quality
+        |--------------------------------------------------------------------------
+        |
+        | The quality used when saving images cropped in the control panel. The
+        | user may override this per crop. When null, the quality defined in
+        | the "defaults" above will be used, otherwise it falls back to 90.
+        |
+        */
+
+        'crop_quality' => null,
+
+        /*
+        |--------------------------------------------------------------------------
         | Image Manipulation Presets
         |--------------------------------------------------------------------------
         |
@@ -83,7 +96,11 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            // Vollflächige Hintergrundbilder. Nur die Breite wird begrenzt —
+            // den Beschnitt übernimmt object-cover im Template.
+            'hero_sm' => ['w' => 900, 'q' => 70, 'fm' => 'webp'],
+            'hero_md' => ['w' => 1600, 'q' => 70, 'fm' => 'webp'],
+            'hero_lg' => ['w' => 2400, 'q' => 65, 'fm' => 'webp'],
         ],
 
         /*
@@ -135,8 +152,9 @@ return [
     | Control Panel Video Thumbnails
     |--------------------------------------------------------------------------
     |
-    | When enabled, Statamic will generate thumbnails for videos.
-    | Generated thumbnails are displayed in the Control Panel.
+    | When enabled, Statamic will generate thumbnails for videos when FFmpeg
+    | is available. Generated thumbnails are displayed in the Control Panel.
+    | Without FFmpeg, videos fall back to a filetype icon.
     |
     */
 
@@ -184,6 +202,25 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Crop Aspect Ratios
+    |--------------------------------------------------------------------------
+    |
+    | Configure the aspect ratio presets available in the Control Panel image
+    | crop editor. Each entry may be a "W:H" string (e.g. "16:9") or an array
+    | with a custom label and ratio: ['label' => 'Wide', 'ratio' => '16:9'].
+    |
+    */
+
+    'crop_aspect_ratios' => [
+        '16:9',
+        '4:3',
+        '3:2',
+        '2:1',
+        '1:1',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Enforce Lowercase Filenames
     |--------------------------------------------------------------------------
     |
@@ -209,6 +246,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Additional Filename Character Replacements
+    |--------------------------------------------------------------------------
+    |
+    | When uploading files, certain characters in filenames will be replaced
+    | to ensure a safe filename. You may configure additional replacements.
+    | These are in addition to the native ones. They are not overridable.
+    |
+    */
+
+    'additional_filename_replacements' => [],
+
+    /*
+    |--------------------------------------------------------------------------
     | SVG Sanitization
     |--------------------------------------------------------------------------
     |
@@ -227,6 +277,7 @@ return [
     |
     | Statamic uses FFmpeg to extract thumbnails from videos to be shown in the
     | Control Panel. You may adjust the binary location and cache path here.
+    | The configured binary must exist and be executable.
     |
     */
 

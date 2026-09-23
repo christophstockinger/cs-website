@@ -1,4 +1,108 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+
+@import "@fontsource-variable/schibsted-grotesk/wght.css";
+@import "@fontsource/instrument-serif/400-italic.css";
+
 @source "../views";
+@source "../js";
 @source "../../content";
+
+/*
+ | Theme laut Design-Manual (christophstockinger.de).
+ | Ein einziges Farbschema – kein Light/Dark-Umschalten.
+ */
+@theme {
+    /* Schriften */
+    --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+    --font-sans: "Schibsted Grotesk Variable", "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+    /* Farben */
+    --color-night: #0f0f0d;
+    --color-graphite: #1c1b18;
+    --color-line: #3a3833;
+    --color-chalk: #efece5;
+    --color-stone: #a8a59e;
+    --color-signal: #f2c230;
+
+    /* Schriftgrößen, fließend 390 bis 1440 px */
+    --text-display: clamp(5.25rem, 2.557rem + 11.048vw, 12.5rem);
+    --text-display--line-height: 0.84;
+    --text-display--letter-spacing: -0.02em;
+    --text-display--font-weight: 400;
+
+    --text-title: clamp(3rem, 2.443rem + 2.286vw, 4.5rem);
+    --text-title--line-height: 0.95;
+    --text-title--letter-spacing: -0.02em;
+    --text-title--font-weight: 400;
+
+    --text-tag: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
+    --text-tag--line-height: 1.2;
+    --text-tag--font-weight: 500;
+
+    --text-body: 1rem;
+    --text-body--line-height: 1.5;
+    --text-body--font-weight: 400;
+
+    --text-label: clamp(0.75rem, 0.727rem + 0.095vw, 0.8125rem);
+    --text-label--line-height: 1.2;
+    --text-label--letter-spacing: 0.1em;
+    --text-label--font-weight: 500;
+
+    --text-link: clamp(0.75rem, 0.727rem + 0.095vw, 0.8125rem);
+    --text-link--line-height: 1.2;
+    --text-link--letter-spacing: 0.08em;
+    --text-link--font-weight: 500;
+}
+
+@layer components {
+    /*
+     | Abdunkelung über der Hintergrund-Slideshow. Die Verläufe stapeln sich wie im
+     | Design: der zuerst genannte liegt oben. Mobil zwei, ab md drei Ebenen.
+     */
+    .hero-scrim {
+        background:
+            linear-gradient(180deg, rgb(15 15 13 / 0.85) 0%, rgb(15 15 13 / 0.85) 9%, rgb(15 15 13 / 0) 20%),
+            linear-gradient(0deg, rgb(15 15 13 / 0.92) 0%, rgb(15 15 13 / 0.55) 45%, rgb(15 15 13 / 0.1) 75%, rgb(15 15 13 / 0.35) 100%);
+    }
+
+    @media (width >= 48rem) {
+        .hero-scrim {
+            background:
+                linear-gradient(180deg, rgb(15 15 13 / 0.85) 0%, rgb(15 15 13 / 0.85) 12%, rgb(15 15 13 / 0) 26%),
+                linear-gradient(0deg, rgb(15 15 13 / 0.85) 0%, rgb(15 15 13 / 0) 45%),
+                linear-gradient(90deg, rgb(15 15 13 / 0.82) 0%, rgb(15 15 13 / 0.35) 55%, rgb(15 15 13 / 0.1) 100%);
+        }
+    }
+
+    /* Fließtext aus Markdown-Feldern. */
+    .rich-text :where(p, ul, ol) + :where(p, ul, ol) {
+        margin-top: --spacing(4);
+    }
+
+    .rich-text :where(ul, ol) {
+        padding-inline-start: --spacing(5);
+    }
+
+    .rich-text ul {
+        list-style-type: disc;
+    }
+
+    .rich-text ol {
+        list-style-type: decimal;
+    }
+
+    .rich-text li + li {
+        margin-top: --spacing(1);
+    }
+
+    .rich-text a {
+        text-decoration-line: underline;
+        text-decoration-color: var(--color-signal);
+        text-underline-offset: 3px;
+        transition: color 150ms;
+    }
+
+    .rich-text a:hover {
+        color: var(--color-signal);
+    }
+}
