@@ -1,10 +1,4 @@
 name: 'Christoph Stockinger'
 super: true
-id: 8a4861ee-a322-4bf6-a4d4-5ca04977a0d9
-password_hash: $2y$12$8LP1xazAt8NOFZ1n/8IEIOHufqOW75OOIVf902BFb45PsIlZN23qS
-preferences:
-  collections:
-    pages:
-      view: tree
-    projects:
-      view: list
+id: 587db876-094c-4de4-8548-8a5b38df5ca9
+password_hash: $2y$12$ik/zhqiVQM1Xp964E8IQN.vMhD.MbmHZ1lRqajgHy2ogs66eNS7ZS
