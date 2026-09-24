@@ -17,6 +17,8 @@
 /public/build
 /public/fonts-manifest.dev.json
 /public/hot
+/public/assets
+/public/img
 /public/static
 /public/storage
 /public/vendor/statamic
