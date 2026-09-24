@@ -1,5 +1,8 @@
 <?php
 
+use Statamic\StaticCaching\Replacers\CsrfTokenReplacer;
+use Statamic\StaticCaching\Replacers\NoCacheReplacer;
+
 return [
 
     /*
@@ -61,7 +64,8 @@ return [
         'class' => null,
 
         'urls' => [
-            //
+            'robots.txt',
+            'sitemap.xml',
         ],
 
     ],
@@ -138,8 +142,8 @@ return [
     */
 
     'replacers' => [
-        \Statamic\StaticCaching\Replacers\CsrfTokenReplacer::class,
-        \Statamic\StaticCaching\Replacers\NoCacheReplacer::class,
+        CsrfTokenReplacer::class,
+        NoCacheReplacer::class,
     ],
 
     /*
